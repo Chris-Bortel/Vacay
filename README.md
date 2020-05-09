@@ -16,3 +16,20 @@ To get people excited about traveling after the quarantine is lifted, we propose
 - Ashley Casimir
 - Henry Funk 
 - Chris Bortel
+
+## User Stories
+![user-stories](./assets/user-stories.png)
+
+## Wireframe
+### Landing Page
+![landing-wireframe](./assets/vacay-landing-page.png)
+
+### Destination Page
+![destination-wireframe](./assets/vacay-destination-page.png)
+
+### About Us
+![about-wireframe](./assets/about.png)
+
+### Saved Destination Page
+![saved-destination-wireframe](./assets/vacay-saved-destinations.png)
+
