@@ -1,4 +1,5 @@
 # Software Requirements
+
 The Team Vacay main documentation can be viewed [here](README.md).
 ## Vision
 Provide an outlet for travel daydreaming and a way to limit the vast amount of world destinations down to a few realistic future trips.
