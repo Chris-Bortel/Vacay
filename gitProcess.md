@@ -1,5 +1,9 @@
 #Team Vacay Git Flow
 
+The Team Vacay main documentation can be viewed [here](README.md).
+
+
+
 
 ## Starting the day
 The night before, we should have all updated our local machine with the merged code. This is what that should have looked like. 
