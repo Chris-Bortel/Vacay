@@ -1,5 +1,5 @@
 /* #CF9F6A--Dark Tan; #F4E4C4--Light Tan; #255766--Blue Green;
-#76913B--Sage Green; #A24531--Terracotta; whitesmoke--Offwhite; #802E1B--Brick Red
+rgb(88, 114, 31)--Sage Green;whitesmoke--Offwhite; #802E1B--Brick Red
 Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  Portada Reg = body: font-family: portada, serif; font-weight: 400; font-style: normal;
 */
@@ -118,7 +118,6 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
   height: 200px;
   width: 300px;
   margin: 100px 50px -120px 50px;
-  /* border: 5px solid #255766; */
 }
 
 /* This container is needed to position the front and back side */
@@ -159,7 +158,7 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
 }
 
 .flip-box-back-2 {
-  background-color: #76913B;
+  background-color: rgb(88, 114, 31);
   color: whitesmoke;
   transform: rotateY(180deg);
 }
@@ -262,7 +261,6 @@ footer{
 
 @media screen and (max-width: 1150px) {
   .flip-box{
-    border: none;
     margin: auto auto -120px;
   }
 
