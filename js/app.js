@@ -10,7 +10,6 @@ function Destination(name, path, sun) {
   this.name = name;
   this.path = path;
   this.sun = sun;
- 
 
   destArray.push(this);
 }
@@ -31,31 +30,16 @@ console.log(destArray);
 
 // ??? What is I just iterate the first for objects and push to sun array???
 
- function weather(destArray) {
-  
-  for (var i = 0 ; i < destArray.length ; i++) {
+function weather(destArray) {
+  for (var i = 0; i < destArray.length; i++) {
     if (destArray[i].sun === true) {
       sunArray.push(destArray[i]);
-   console.log('Sunny')
-      
+      console.log("Sunny");
+    } else {
+      snowArray.push(destArray[i]);
     }
   }
 }
 weather(destArray);
 
-// Destination.prototype.weather = function () {
-//   var sunArray = this.Destination([2]);
-//  if (this.sunArray.length === 0) {
-//   for(var i = 0 ; i < destArray.length ; i++){
-//         this.sunArray.push
-//        console.log('I am sunny');
-//       //  I need to figure out how to do this
-//        var sun = this.sun
-    
-//   //  }    else {
-//   //       this.sun === false;
-//   //      console.log('I am snowy');
-//   //       push[i](snowArray);
-//   //    }
-//   }
-// }
+
