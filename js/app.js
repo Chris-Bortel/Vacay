@@ -37,6 +37,8 @@ function randomizer() {
 randomizer();
 
 //TODO: build function that goes through the dest array and makes and array of eight random destinations
+// TODO: make an array of the randomized destinations
+
 
 function fillArray() {
   while (randArray.length < destArray.length) {
@@ -48,21 +50,22 @@ function fillArray() {
     }
   }
 }
+fillArray()
 
-// TODO: Push assign numbers to array
-
+//TODO: make two arrays, one that holds sunny destinations, one from snowy destinations 
 // // sun and snow array maker
-// function weather(destArray) {
-//   for (var i = 0; i < destArray.length; i++) {
-//     if (destArray[i].sun === true) {
-//       sunArray.push(destArray[i]);
-//       console.log("Sunny");
-//     } else {
-//       snowArray.push(destArray[i]);
-//       console.log('snowy')
-//     }
-//     weather(destArray);
-//   }
-// }
+function weather(destArray) {
+  fillArray();
+  for (var i = 0; i < randArray.length; i++) {
+    if (destArray[randArray[i]].sun === true) {
+      sunArray.push(destArray[randArray[i]]);
+      console.log("Sunny");
+    } else {
+      snowArray.push(destArray[randArray[i]]);
+      console.log('snowy')
+    }
+  }
+}
+weather(destArray);
 
 
