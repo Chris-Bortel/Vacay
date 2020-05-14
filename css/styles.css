@@ -17,33 +17,52 @@ body {
   background-color: whitesmoke;
 }
 
-button {
+button a {
   background-color: whitesmoke ;
   color: #662027; 
-  border-left: 10px solid #662027;
-  border-right: 10px solid #662027;
-  border-top:0px solid #662027; 
-  border-bottom:0px solid #662027;
-  border-radius: 5%;
-  padding: 3px;
+  border-left: 5px solid #662027;
+  border-right: 5px solid #662027;
+  padding: 2px 8px;
 }
-
 
 button :hover{
   background-color: #662027;
-  border: 3px solid #662027;
-  color: whitesmoke;
-  border-radius: 3%;
+  color: whitesmoke; 
 }
 
-#see-saved-button{
-  margin: 30px;
+button {
+  border: hidden;
+}
+
+#submit-button{
+  max-height: 50px;
+}
+
+header a {
+  text-decoration: none;
+  color: #662027;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  border-right: 5px solid #662027;
+  border-left: 5px solid #662027;
+  padding: 2px 8px;
+}
+
+header a:hover{
+  background-color: #662027;
+  color:whitesmoke
+}
+
+
+header{
+margin: 40px;
 }
 
 
 nav {
   float: right;
-  margin: 33px 50px;
+  margin: 0px 40px 0px;
   }
 
 #dest {
@@ -51,17 +70,18 @@ nav {
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
-  font-size: 14px;
+  font-size: 16px;
   background-color: whitesmoke;
-  border: 1px solid #662027;
-  text-align: center;
+  border: none;
+  width: 200px;
 }
+
 
 #hero-image {
   background-image: url(../img/hero-at-night.jpg);
   background-repeat: no-repeat;
-  margin: 40px auto 40px;  
-  width: 85%;
+  margin: 30px auto 60px;  
+  width: 80%;
   height: 600px;
   border: 5px solid #255766;
 }
@@ -71,12 +91,13 @@ nav {
 }
 
 hr {
-  width: 95%;
+  width: 90%;
   border: .5px solid #662027;
 }
 
 #criteria {
   display: flex;
+  align-items: flex-end;
   justify-content: center;
   margin-top: 80px;
 }
@@ -96,7 +117,7 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
   background-color: transparent;
   height: 200px;
   width: 300px;
-  margin: 50px;
+  margin: 100px 50px -75px 50px;
   border: 5px solid #255766;
 }
 
@@ -161,10 +182,8 @@ p {
   font-size: 20px;
   font-family: portada, serif; font-weight: 400; font-style: normal;
   line-height: 1.5;
-  margin: 20px auto;
+  margin: 20px 10px;
 }
-
-
 
 #select-explain {
   text-align: center;
@@ -175,9 +194,9 @@ p {
 
 
 a {
-    color: #662027; 
-
   text-decoration: none;
+  color: #662027; 
+  text-align: center;
   font-size: 16px;
   font-family: portada, serif; 
   font-weight: 300; 
@@ -187,22 +206,22 @@ a {
 footer a {
   text-decoration: none;
   color: #662027;
-  font-size: 18px;
-  line-height: 3;
+  font-size: 16px;
   font-weight: 500;
   margin-bottom: 15px;
-  padding: 3px;
+  border-right: 5px solid #255766;
+  border-left: 5px solid #255766;
+  padding: 2px 8px;
 }
 
 footer a:hover{
-  border-right: 15px solid #255766;
-  border-left: 15px solid #255766;
-  border-radius: 3%;
-  padding: 0px 10px;
+  background-color: #255766;
+  color:whitesmoke
 }
 
 footer p {
   text-decoration: none;
+  text-align: left;
   color: #255766;
   font-size: 15px;
   line-height: 3;
@@ -211,16 +230,16 @@ footer p {
 }
 
 footer{
-  text-align: center;
+  text-align: left;
   max-height: 50px;
-  margin: 200px auto 50px;
+  margin: 250px auto 50px;
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
   border-top: 1px solid #662027;
-  padding-top: 20px;
+  padding: 40px 0px;
 
-  width: 95%;
+  width: 90%;
 }
 
 
