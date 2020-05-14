@@ -33,6 +33,6 @@ To get people excited about traveling after the quarantine is lifted, we propose
 ![saved-destination-wireframe](./assets/vacay-saved-destinations.png)
 
 ## Domain Modeling
-![Domain-Modeling-Flowchart](./assets/vacay-flowchart.png)
+![Domain-Modeling-Flowchart](./assets/updated-erd.png)
 
 
