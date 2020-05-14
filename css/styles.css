@@ -118,7 +118,7 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
   height: 200px;
   width: 300px;
   margin: 100px 50px -120px 50px;
-  border: 5px solid #255766;
+  /* border: 5px solid #255766; */
 }
 
 /* This container is needed to position the front and back side */
@@ -137,7 +137,7 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
 }
 
 /* Position the front and back side */
-.flip-box-front, .flip-box-back {
+.flip-box-front, .flip-box-back, .flip-box-back-2 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -154,6 +154,12 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
 /* Style the back side */
 .flip-box-back {
   background-color: #255766;
+  color: whitesmoke;
+  transform: rotateY(180deg);
+}
+
+.flip-box-back-2 {
+  background-color: #76913B;
   color: whitesmoke;
   transform: rotateY(180deg);
 }
