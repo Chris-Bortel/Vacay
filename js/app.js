@@ -26,10 +26,14 @@ new Destination("Zermatt", "../html/zermatt.html", false);
 console.log(destArray);
 // console.log(destArray[4]);
 
-// Create function that iterates through destArray(to fin hot or cold option) and creates and pushes to a new temp array
+// want to randomize destArray.length and then put that array of eight into the weather() in order to separate the destinations into sun and snow destinations.
 
-// ??? What is I just iterate the first for objects and push to sun array???
-
+// randomizer
+function randomizer() {
+  return Math.floor(Math.random() * 8);
+}
+randomizer
+// sun and snow array maker
 function weather(destArray) {
   for (var i = 0; i < destArray.length; i++) {
     if (destArray[i].sun === true) {
