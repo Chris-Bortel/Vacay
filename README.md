@@ -1,6 +1,7 @@
 # Team Vacay
 
 The Software Requirments documentation can be viewed [here](requirements.md).
+Git flow can be found [here](gitProcess.md)
 ## About
 This is a web based interactive application built with the purpose of providing users with a way to explore travel options based on their preferences. 
 
