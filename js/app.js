@@ -4,6 +4,8 @@
 var destArray = [];
 var sunArray = [];
 var snowArray = [];
+var randArray = [];
+
 //constructor function
 
 function Destination(name, path, sun) {
@@ -28,22 +30,39 @@ console.log(destArray);
 
 // want to randomize destArray.length and then put that array of eight into the weather() in order to separate the destinations into sun and snow destinations.
 
-// randomizer
+
 function randomizer() {
   return Math.floor(Math.random() * 8);
 }
-randomizer
-// sun and snow array maker
-function weather(destArray) {
-  for (var i = 0; i < destArray.length; i++) {
-    if (destArray[i].sun === true) {
-      sunArray.push(destArray[i]);
-      console.log("Sunny");
+randomizer();
+
+//TODO: build function that goes through the dest array and makes and array of eight random destinations
+
+function fillArray() {
+  while (randArray.length < destArray.length) {
+    var randDest = randomizer(destArray.length);
+    if (randArray.includes(randDest)) {
+      console.log('repeat repeat');
     } else {
-      snowArray.push(destArray[i]);
+      randArray.push(randDest);
     }
   }
 }
-weather(destArray);
+
+// TODO: Push assign numbers to array
+
+// // sun and snow array maker
+// function weather(destArray) {
+//   for (var i = 0; i < destArray.length; i++) {
+//     if (destArray[i].sun === true) {
+//       sunArray.push(destArray[i]);
+//       console.log("Sunny");
+//     } else {
+//       snowArray.push(destArray[i]);
+//       console.log('snowy')
+//     }
+//     weather(destArray);
+//   }
+// }
 
 
