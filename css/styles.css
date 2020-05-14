@@ -1,12 +1,12 @@
-/* #CF9F6A--Dark Tan; #F4E4C4--Light Tan; #315A55--Blue Green; #C2B59B--Taupe;
-#76913B--Sage Green; #A24531--Terracotta
+/* #CF9F6A--Dark Tan; #F4E4C4--Light Tan; #255766--Blue Green;
+#76913B--Sage Green; #A24531--Terracotta; whitesmoke--Offwhite; #802E1B--Brick Red
 Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  Portada Reg = body: font-family: portada, serif; font-weight: 400; font-style: normal;
 */
 
 
 /* FIX DROPDOWN CLICK BOX, DROPDOWN STYLING, HOVER STATE buttons,
-BACKGROUND COLOR, flip criteria placement */
+flip criteria placement */
 
 .thumbnail {
   height: 250px;
@@ -14,7 +14,7 @@ BACKGROUND COLOR, flip criteria placement */
 }
 
 body {
-  background-color: #C2B59B;
+  background-color: whitesmoke;
 }
 
 nav {
@@ -26,22 +26,24 @@ nav {
 #hero-image {
   background-image: url(../img/hero-at-night.jpg);
   background-repeat: no-repeat;
-  margin: 0px auto 40px;  
-  width: 90%;
+  margin: 40px auto 60px;  
+  width: 85%;
   height: 600px;
+  border: 5px solid #255766;
 }
 
 #hero-image h1 {
-  color: #F4E4C4;
+  color:whitesmoke;
 }
 
 hr {
-  width: 90%;
-  border: .5px solid #A24531;
+  width: 95%;
+  border: .5px solid #662027;
 }
 
 #criteria {
   display: inline-flex;
+  margin-top: 80px;
 }
 
 
@@ -50,7 +52,7 @@ h1 {
   font-size: 42px;
   text-align: center;
   padding-top: 100px;
-  color: #F4E4C4;
+  color: whitesmoke;
 }
 
 /* The flip box container - set the width and height to whatever you want. We have added the border property to 
@@ -60,7 +62,7 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
   width: 250px;
   height: 250px;
   margin: 50px;
-  border: 3px solid #315A55;
+  border: 5px solid #255766;
 }
 
 /* This container is needed to position the front and back side */
@@ -89,14 +91,14 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
 
 /* Style the front side (fallback if image is missing) */
 .flip-box-front {
-  background-color: #A24531;
-  color: #F4E4C4;
+  background-color: #662027;
+  color:whitesmoke;
 }
 
 /* Style the back side */
 .flip-box-back {
-  background-color: #315A55;
-  color: #F4E4C4;
+  background-color: #255766;
+  color: whitesmoke;
   transform: rotateY(180deg);
 }
 
@@ -105,14 +107,14 @@ h2 {
   font-weight: 400; 
   font-style: normal;
   font-size: 26px;
-  color: #F4E4C4;
+  color: whitesmoke;
   padding-top: 50px;
 
 }
 
 #see-saved-button{
-  height: 50px;
-  width: 200px;
+  /* height: 50px;
+  width: 200px; */
   margin: 30px;
 }
 
@@ -121,7 +123,7 @@ h3 {
   font-weight: 400; 
   font-style: normal;
   font-size: 26px;
-  color: #315A55;
+  color: #255766;
 }
 
 p {
@@ -134,19 +136,17 @@ p {
 
 
 button {
-  background-color: #F4E4C4;
-  border: 3px solid #A24531;
-  border-radius: 5%;
+  background-color: #662027;
+  border: 3px solid #662027;
+  border-radius: 3%;
 }
 
-#submit-button{
-  height: 50px;
-  width: 90px;
-}
 
 button :hover{
-  background-color: #A24531;
-  color: #F4E4C4;
+  background-color: whitesmoke ;
+  color: #662027; 
+  border: 5px solid whitesmoke;
+  border-radius: 3%;
 }
 
 #select-explain {
@@ -159,14 +159,27 @@ button :hover{
 
 a {
   text-decoration: none;
-  color: #A24531;
+  color: whitesmoke;
   font-size: 16px;
 }
 
 footer a {
   text-decoration: none;
-  color: #A24531;
+  color: #662027;
   font-size: 20px;
+  line-height: 3;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+footer a:hover{
+  color: #255766;
+}
+
+footer p {
+  text-decoration: none;
+  color: #255766;
+  font-size: 15px;
   line-height: 3;
   font-weight: 500;
   margin-bottom: 15px;
@@ -179,10 +192,10 @@ footer{
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
-  border-top: 1px solid #A24531;
+  border-top: 1px solid #662027;
   padding-top: 20px;
 
-  width: 90%;
+  width: 95%;
 }
 
 
