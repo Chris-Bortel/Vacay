@@ -117,7 +117,7 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
   background-color: transparent;
   height: 200px;
   width: 300px;
-  margin: 100px 50px -75px 50px;
+  margin: 100px 50px -120px 50px;
   border: 5px solid #255766;
 }
 
@@ -173,7 +173,7 @@ h3 {
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
-  font-size: 26px;
+  font-size: 20px;
   color: #255766;
 }
 
@@ -181,10 +181,9 @@ h4 {
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
-  font-size: 26px;
   color: #255766;
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 
@@ -253,4 +252,29 @@ footer{
   width: 90%;
 }
 
+/* responsive down to tablet size 992px and above*/
 
+@media screen and (max-width: 1150px) {
+  .flip-box{
+    border: none;
+    margin: auto auto -120px;
+  }
+
+  h1 {
+    font-size: 36px;
+    padding-top: 50px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+
+  #hero-image {
+    background-image: url(../img/small-hero-at-night.jpg);
+    height: 500px;
+  }
+  
+}
