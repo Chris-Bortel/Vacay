@@ -30,16 +30,11 @@ console.log(destArray);
 
 // want to randomize destArray.length and then put that array of eight into the weather() in order to separate the destinations into sun and snow destinations.
 
-
 function randomizer() {
   return Math.floor(Math.random() * 8);
 }
-randomizer();
 
-//TODO: build function that goes through the dest array and makes and array of eight random destinations
-// TODO: make an array of the randomized destinations
-
-
+// makes an array of the randomized numbers
 function fillArray() {
   while (randArray.length < destArray.length) {
     var randDest = randomizer(destArray.length);
@@ -52,8 +47,8 @@ function fillArray() {
 }
 fillArray()
 
-//TODO: make two arrays, one that holds sunny destinations, one from snowy destinations 
-// // sun and snow array maker
+// sun and snow array maker
+// uses fillArray to make a random array of destinations, and then sort the destinations into a sun or snow array. 
 function weather(destArray) {
   fillArray();
   for (var i = 0; i < randArray.length; i++) {
@@ -67,5 +62,8 @@ function weather(destArray) {
   }
 }
 weather(destArray);
+
+
+// TODO: Make sure that if they go back to the quiz page, that we do not start the randomizer over
 
 
