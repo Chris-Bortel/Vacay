@@ -9,8 +9,8 @@ Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Luc
 flip criteria placement */
 
 .thumbnail {
-  height: 250px;
-  width: 250px;
+  height: 200px;
+  width: 300px;
 }
 
 body {
@@ -26,7 +26,7 @@ nav {
 #hero-image {
   background-image: url(../img/hero-at-night.jpg);
   background-repeat: no-repeat;
-  margin: 40px auto 60px;  
+  margin: 40px auto 40px;  
   width: 85%;
   height: 600px;
   border: 5px solid #255766;
@@ -42,7 +42,8 @@ hr {
 }
 
 #criteria {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
   margin-top: 80px;
 }
 
@@ -51,7 +52,7 @@ h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 42px;
   text-align: center;
-  padding-top: 100px;
+  padding-top: 80px;
   color: whitesmoke;
 }
 
@@ -59,8 +60,8 @@ h1 {
 demonstrate that the flip itself goes out of the box on hover (remove perspective if you don't want the 3D effect */
 .flip-box {
   background-color: transparent;
-  width: 250px;
-  height: 250px;
+  height: 200px;
+  width: 300px;
   margin: 50px;
   border: 5px solid #255766;
 }
@@ -113,8 +114,6 @@ h2 {
 }
 
 #see-saved-button{
-  /* height: 50px;
-  width: 200px; */
   margin: 30px;
 }
 
@@ -166,14 +165,17 @@ a {
 footer a {
   text-decoration: none;
   color: #662027;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 3;
   font-weight: 500;
   margin-bottom: 15px;
 }
 
 footer a:hover{
-  color: #255766;
+  border-right: 15px solid #255766;
+  border-left: 15px solid #255766;
+  border-radius: 3%;
+  padding: 10px 10px;
 }
 
 footer p {
