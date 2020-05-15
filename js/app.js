@@ -29,6 +29,22 @@ new Destination('Zermatt', '../html/zermatt.html', false);
 console.log(destArray);
 // console.log(destArray[4]);
 
+// A function that goes through destArray and finds the 'sun' or 'snow' destinations based off of what the user chooses.
+function weather(userChoice) {
+  var choiceArray = [];
+  for (var i = 0; i < destArray.length; i++) {
+    if (destArray[i].sun === true) {
+      choiceArray.push(destArray[i]);
+      console.log('Sunny');
+    }
+    if (destArray[i].snow === true) {
+      choiceArray.push(destArray[i]);
+      console.log('Snowy');
+    }
+  }
+  return choiceArray;
+}
+
 // want to randomize destArray.length and then put that array of eight into the weather() in order to separate the destinations into sun and snow destinations.
 
 function randomizer(max) {
