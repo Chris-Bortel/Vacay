@@ -1,3 +1,223 @@
+/* #CF9F6A--Dark Tan; #F4E4C4--Light Tan; #255766--Blue Green;
+rgb(88, 114, 31)--Sage Green;whitesmoke--Offwhite; #802E1B--Brick Red
+Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ Portada Reg = body: font-family: portada, serif; font-weight: 400; font-style: normal;
+*/
+
+.container {
+  background-color: whitesmoke;
+}
+
+.sun{
+background-color: rgb(88, 114, 31);
+}
+
+.sun p {
+  color:rgb(88, 114, 31);
+}
+
+.sun h1 {
+  color:#662027;
+}
+
+.snow p {
+  color: #255766;
+}
+
+.snow {
+  background-color: #255766;
+}
+
+.snow h1 {
+  color: #255766;
+}
+
+/* If not specifically tagged for .sun section applies for snow and both */
+
 body {
-  background-color:rgba(250, 128, 114, 0.55);
+  margin: 20px;
+}
+
+main {
+  padding: 0% 10%;
+}
+
+header a {
+  text-decoration: none;
+  color: #662027;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  border-right: 5px solid #662027;
+  border-left: 5px solid #662027;
+  padding: 2px 8px;
+}
+
+header a:hover{
+  background-color: #662027;
+  color:whitesmoke
+}
+
+header{
+  padding: 5%;
+  }
+  
+
+button a {
+  background-color: whitesmoke ;
+  color: #662027; 
+  border-left: 5px solid #662027;
+  border-right: 5px solid #662027;
+  padding: 2px 8px;
+}
+
+button :hover{
+  background-color: #662027;
+  color: whitesmoke; 
+}
+
+button {
+  border: hidden;
+  margin-left: 30px;
+}
+
+nav {
+  float: right;
+  }
+
+#dest {
+  color: #662027;
+  font-family: portada, serif; 
+  font-weight: 400; 
+  font-style: normal;
+  font-size: 16px;
+  background-color: whitesmoke;
+  border: none;
+  width: 200px;
+}
+
+h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 42px;
+  text-align: center;
+  padding-top: 70px;
+  color: #662027;
+}
+
+aside {
+  float: left;
+  margin: 50px 0px 0px 0px;
+}
+
+article {
+  margin: 0px auto 0px 80px;
+}
+
+#hero{
+  background-image: url(../img/los-angeles-sunset.jpg);
+  margin: 50px 30px;
+  height: 500px;
+  width: auto;
+}
+
+
+
+p {
+  height: 200px;
+  overflow: scroll;
+  text-align: left;
+  font-size: 15px;
+  font-family: portada, serif; font-weight: 400; font-style: normal;
+  line-height: 1.5;
+  margin: 60px 30px;
+}
+
+
+a {
+  text-decoration: none;
+  color: #662027; 
+  text-align: center;
+  font-size: 16px;
+  font-family: portada, serif; 
+  font-weight: 300; 
+  font-style: normal;
+}
+
+
+.sun footer a {
+  color: rgb(88, 114, 31);
+  font-size: 16px;
+  font-weight: 400;
+  border-right: 5px solid #76913B;
+  border-left: 5px solid #76913B;
+
+}
+.sun footer a:hover{
+  background-color: rgb(88, 114, 31);
+  color:whitesmoke
+}
+
+/* This section applies to .snow and generic  */
+
+footer a {
+  text-decoration: none;
+  color: #255766;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  border-right: 5px solid #255766;
+  border-left: 5px solid #255766;
+  padding: 2px 8px;
+}
+
+footer a:hover{
+  background-color: #255766;
+  color:whitesmoke
+}
+
+footer p {
+  overflow: auto;
+  text-decoration: none;
+  text-align: left;
+  color: #255766;
+  font-size: 15px;
+  line-height: 3;
+  font-weight: 500;
+  margin: 15px auto;
+  height: auto;
+}
+
+footer{
+  text-align: left;
+  margin: 250px auto 0px;
+  font-family: portada, serif; 
+  font-weight: 400; 
+  font-style: normal;
+  border-top: 1px solid #662027;
+  padding: 40px 0px;
+
+  width: 90%;
+}
+
+/* ---------------------------- */
+
+/* responsive down to tablet size 992px and above*/
+
+@media screen and (max-width: 1200px) {
+
+  h1 {
+    font-size: 36px;
+    padding-top: 50px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+  h4 {
+    font-size: 16px;
+  }
+
+  #hero {
+    height: 400px;
+  }
 }
