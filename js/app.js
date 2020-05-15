@@ -31,8 +31,8 @@ console.log(destArray);
 
 // want to randomize destArray.length and then put that array of eight into the weather() in order to separate the destinations into sun and snow destinations.
 
-function randomizer() {
-  return Math.floor(Math.random() * 8);
+function randomizer(max) {
+  return Math.floor(Math.random() * max);
 }
 
 // makes an array of the randomized numbers
