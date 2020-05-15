@@ -59,7 +59,7 @@ header{
 margin: 40px;
 }
 
-
+/* styling for the dropdown */
 nav {
   float: right;
   margin: 0px 40px 0px;
@@ -75,7 +75,7 @@ nav {
   border: none;
   width: 200px;
 }
-
+/*  */
 
 #hero-image {
   background-image: url(../img/hero-at-night.jpg);
