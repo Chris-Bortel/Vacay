@@ -9,23 +9,25 @@
 </head>
 <body>
   <header>
-    <button id = "see-saved-button"> <a href="./html/saved.html">See Saved Destinations</a></button>
+    <a href="./html/saved.html">Saved Destinations</a>
+   
     <nav>
-      <!-- dropdown menus will go here! -->
       <form>
         <!-- <label>Destinations</label> -->
           <select id="dest" name="dest"> <!-- NEED TO FIGURE OUT LINKING ON DROPDOWN -->
-              <option value="">Destinations</option>
-              <option value="Los-Angeles">Los Angeles</option>
-              <option value="Granada">Granada</option>
-              <option value="Phuket">Phuket</option>
-              <option value="Cabo-San-Lucas">Cabo San Lucas</option>
-              <option value="Telluride">Telluride</option>
-              <option value="Zermatt">Zermatt</option>
-              <option value="Tramso">Tramsø</option>
-              <option value="Stowe">Stowe</option>
+              <!-- <option value="" id = "placeholder">Destinations</option> -->
+              <option value="">Browse Destinations</option>
+              <option value="Stowe">Stowe, Vermont</option>
+              <option value="Telluride">Telluride, Colorado</option>
+              <option value="Tramso">Tramsø, Norway</option>
+              <option value="Zermatt">Zermatt, Switzerland</option>
+              <option value="">-----------</option>
+              <option value="Cabo-San-Lucas">Cabo San Lucas, Mexico</option>
+              <option value="Granada">Granada, Spain</option>
+              <option value="Los-Angeles">Los Angeles, California</option>
+              <option value="Phuket">Phuket, Thailand</option>
           </select>
-       <input id="click" type="click" value="click"/>  <!-- need to get rid of submit box -->
+       <!-- <input id="click" type="click" value="click"/>  need to get rid of submit box -->
       </form>
       <!-- <form>
         <label>Browse By Category</label>
@@ -59,33 +61,41 @@
           </div>
         </div>
       </div>
-
+      
+      
+      <p>
+        <h3>Do You Prefer Snow? Or Sun?</h3>
+      </p> 
+      
+      
       <div class="flip-box">
         <div class="flip-box-inner">
           <div class="flip-box-front">
-            <img src="./img/sun-thumbnail.jpg" class="thumbnail" alt="Sun Picture" title="Sun Picture"> 
+            <img src="./img/beach-walk.jpg" class="thumbnail" alt="Sun Picture" title="Sun Picture"> 
           </div>
-          <div class="flip-box-back">
+          <div class="flip-box-back-2">
             <h1>Sun</h1>
             <p>Vitamin D!</p>
           </div>
         </div>
       </div>
       <!-- <img src="./img/snow-thumbnail.jpg" class="thumbnail" alt="Snow Picture" title="Snow Picture">
-      <img src="./img/sun-thumbnail.jpg" class="thumbnail" alt="Sun Picture" title="Sun Picture">  -->
-
-    </section>
-    <section id="select-explain">
-      <!-- paragraph and submit -->
+        <img src="./img/sun-thumbnail.jpg" class="thumbnail" alt="Sun Picture" title="Sun Picture">  -->
+        
+      </section>
+      
       <p>
-        <h3>Do You Prefer Sun? Or Snow? (Click One)</h3>
-      </p>
-      <button type="submit" id="submit-button"><a>Submit</a></button>
+        <h4> <---- click one ----> </h4>
+      </p> 
+      <p><button type="submit" id="submit-button"><a>Submit</a></button></p>
+
+      <section id="select-explain">
+        <!-- paragraph and submit -->
     </section>
   </main>
   <footer>
-      <a href="./html/about.html">Meet The Team</a><br>
-      &copy;Vacay Travel Planner 2020
+      <a href="./html/about.html">Meet The Team</a>
+      <p>&copy;2020  Team Vacay: Ashley Casimir, Chris Bortel, Henry Funk, Kim Damalas </p> 
     
    
   </footer>

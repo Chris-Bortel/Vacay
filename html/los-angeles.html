@@ -3,67 +3,95 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="../css/reset.css" alt="">
-  <link rel="stylesheet" href="../css/destinations.css" alt="">
-  <title>Travel Fever</title>
+  <link rel="stylesheet" href="../css/reset.css" type="text/css">
+  <link rel="stylesheet" href="../css/destinations.css" type="text/css">
+  <title>Vacay Travel Planner</title>
 </head>
-<body>
+
+<!-- Container and body margins make snow or sun page border -->
+<body class = "sun">
+  <div class = "container">
   <header>
+    <a href="../index.html">Back to Home</a>
+    <a href="../html/saved.html">Saved Destinations</a>
+
     <nav>
-      
-      <button><a href="../index.html">Back to Home</a></button>
-      <img src="https://placehold.it/100x75/ddd" alt="logo">
-      <!-- <ul>
-        <li><a href="../html/saved.html">Saved Destinations</a></li>
-        <br>
-        <li><a href="./html/dest1.html">Destination-1</a></li>
-        <li><a href="./html/dest2.html">Destination-2</a></li>
-        <li><a href="./html/dest3.html">Destination-3</a></li>
-        <li><a href="./html/dest4.html">Destination-4</a></li>
-        <li><a href="./html/dest5.html">Destination-5</a></li>
-        <li><a href="./html/dest6.html">Destination-6</a></li>
-        <li><a href="./html/dest7.html">Destination-7</a></li>
-        <li><a href="./html/dest8.html">Destination-8</a></li>
-        <br>
-        <li><a href="../html/about.html">About Us</a></li>
-      </ul> -->
+      <!-- dropdown menus will go here! -->
+      <form>
+        <!-- <label>Destinations</label> -->
+          <select id="dest" name="dest"> <!-- NEED TO FIGURE OUT LINKING ON DROPDOWN -->
+              <!-- <option value="" id = "placeholder">Destinations</option> -->
+              <option value="">Browse Destinations</option>
+              <option value="Stowe">Stowe, Vermont</option>
+              <option value="Telluride">Telluride, Colorado</option>
+              <option value="Tramso">Tramsø, Norway</option>
+              <option value="Zermatt">Zermatt, Switzerland</option>
+              <option value="">-----------</option>
+              <option value="Cabo-San-Lucas">Cabo San Lucas, Mexico</option>
+              <option value="Granada">Granada, Spain</option>
+              <option value="Los-Angeles">Los Angeles, California</option>
+              <option value="Phuket">Phuket, Thailand</option>
+          </select>
+       <!-- <input id="click" type="click" value="click"/>  need to get rid of submit box -->
+      </form>
+      <!-- <form>
+        <label>Browse By Category</label>
+          <select id="dest" name="dest">
+              <option value="Snow">Snow</option>
+              <option value="Sun">Sun</option>
+          </select>
+      </form> STRETCH GOAL!!!  -->
     </nav>
   </header>
   <main>
-    <h1>DESTINATION NAME</h1>
-    <section>
-      <ul> 
-        <h2>Temps</h2>
-        <li>Fall Temp</li>
-        <li>Winter</li>
-        <li>Spring</li>
-        <li>Summer</li>
-      </ul>
-      <ul> 
-        <h2>Events</h2>
-        <li>Event 1</li>
-        <li>Event 2</li>
-        <li>Event 3</li>
-        <li>Event 4</li>
-      </ul>
-      <ul> 
-        <h2>Links</h2>
-        <li>Link 1</li>
-        <li>Link 2</li>
-        <li>Link 3</li>
-        <li>Link 4</li>
-      </ul>
-    </section>
+    
+    <aside>
+      <section id = "temps">
+        <ul> 
+          <h2>Temps</h2>
+          <li>Fall Temp</li>
+          <li>Winter</li>
+          <li>Spring</li>
+          <li>Summer</li>
+        </ul>
+      </section>
+      <section id = "events">
+        <ul> 
+          <h2>Events</h2>
+          <li>Event 1</li>
+          <li>Event 2</li>
+          <li>Event 3</li>
+          <li>Event 4</li>
+        </ul>
+      </section>
+      <section id = "links">
+        <ul> 
+          <h2>Links</h2>
+          <li>Link 1</li>
+          <li>Link 2</li>
+          <li>Link 3</li>
+          <li>Link 4</li>
+        </ul>
+      </section>
+    </aside>
     <article>
-      <img src="https://placehold.it/300x300/ddd" alt="hero pic">
-      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam voluptatem impedit quaerat nulla saepe eum natus pariatur laudantium architecto temporibus similique sapiente est, ab facilis atque nesciunt voluptas expedita? Nisi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque inventore voluptatem commodi, itaque quos cumque expedita quam vero eos maxime obcaecati at asperiores debitis. Iste consequatur aliquam quo magni minima?</p>
+      <h1 id = "hero">Los Angeles</h1>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam voluptatem impedit quaerat nulla saepe eum natus pariatur laudantium architecto temporibus similique sapiente est, ab facilis atque nesciunt voluptas expedita? Nisi.
+      <br>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aut debitis at aperiam est quia dolor! Amet sit deserunt necessitatibus a, laborum, aperiam magni voluptatibus porro quasi harum facilis molestias.
+      <br>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aut debitis at aperiam est quia dolor! Amet sit deserunt necessitatibus a, laborum, aperiam magni voluptatibus porro quasi harum facilis molestias.
+      <br>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aut debitis at aperiam est quia dolor! Amet sit deserunt necessitatibus a, laborum, aperiam magni voluptatibus porro quasi harum facilis molestias.
+      </p>
+      <button type = "submit"><a href="../html/saved.html">Save This Destination</a></button>
     </article>
-    <button><a href="">Save This Destination</a></button>
   </main>
   <script src="../js/app.js" alt="" ></script>
+  <footer>
+    <a href="../html/about.html">Meet The Team</a>
+    <p>&copy;2020  Team Vacay: Ashley Casimir, Chris Bortel, Henry Funk, Kim Damalas </p> 
+  </footer>
+  
+  <!-- Container and body margins make snow or sun page border -->
+</div>
 </body>
-<footer>
-  <link> <a href="../html/about.html">Meet The Team</a></link>
-  &copy;Vacay Travel Planner 2020 
-</footer>
 </html>
