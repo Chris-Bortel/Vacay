@@ -1,5 +1,4 @@
-/* #CF9F6A--Dark Tan; #F4E4C4--Light Tan; #255766--Blue Green;
-rgb(88, 114, 31)--Sage Green;whitesmoke--Offwhite; #802E1B--Brick Red
+/* 
 Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  Portada Reg = body: font-family: portada, serif; font-weight: 400; font-style: normal;
 */
@@ -7,29 +6,55 @@ Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Luc
 .container {
   background-color: whitesmoke;
 }
+/* sun pages blue #255766--Blue Green with orange Orange--#F15A29 accent 
+whitesmoke on both */
 
 .sun{
-background-color: rgb(88, 114, 31);
+background-color:#D35A29;
 }
 
-.sun p {
-  color:rgb(88, 114, 31);
-}
-
-.sun h1 {
-  color:#662027;
-}
-
-.snow p {
+.sun p,.sun h1, .sun aside, .sun #dest{
   color: #255766;
 }
+
+.sun header a, .sun footer a {
+  color:#255766;
+  border-right: 5px solid #255766;
+  border-left: 5px solid #255766;
+}
+
+.sun header a:hover, .sun footer a:hover {
+  color: whitesmoke;
+  background-color: #255766;
+}
+
+.sun button a {
+  color:#255766;
+  border-left: 5px solid #255766;
+  border-right: 5px solid #255766;
+}
+
+.sun button :hover{
+  background-color: #255766;
+  color: whitesmoke; 
+}
+
+.sun footer {
+  border-color: #255766;
+}
+
+/* snow pages blue #255766--Blue Green with cranberry #802E1B--Cranberry accent */
 
 .snow {
   background-color: #255766;
 }
 
 .snow h1 {
-  color: #255766;
+  color: #662027;
+}
+
+.snow p{
+  color: #662027;
 }
 
 /* If not specifically tagged for .sun section applies for snow and both */
@@ -52,6 +77,8 @@ header a {
   border-left: 5px solid #662027;
   padding: 2px 8px;
 }
+
+
 
 header a:hover{
   background-color: #662027;
@@ -100,13 +127,14 @@ h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 42px;
   text-align: center;
-  padding-top: 70px;
+  padding-top: 30px;
   color: #662027;
 }
 
 aside {
   float: left;
   margin: 50px 0px 0px 0px;
+  color: #662027;
 }
 
 article {
@@ -144,29 +172,14 @@ a {
 }
 
 
-.sun footer a {
-  color: rgb(88, 114, 31);
-  font-size: 16px;
-  font-weight: 400;
-  border-right: 5px solid #76913B;
-  border-left: 5px solid #76913B;
-
-}
-.sun footer a:hover{
-  background-color: rgb(88, 114, 31);
-  color:whitesmoke
-}
-
-/* This section applies to .snow and generic  */
-
 footer a {
   text-decoration: none;
-  color: #255766;
+  color: #662027;
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 15px;
-  border-right: 5px solid #255766;
-  border-left: 5px solid #255766;
+  border-right: 5px solid #662027;
+  border-left: 5px solid #662027;
   padding: 2px 8px;
 }
 
