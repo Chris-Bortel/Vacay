@@ -30,6 +30,27 @@ new Destination('Tramsø', '../html/tramso.html', '', true);
 new Destination('Zermatt', '../html/zermatt.html', '', true);
 console.log(destArray);
 
+function dropDownSelection(){
+  var dropDown = document.getElementById('dest').value;
+  if (dropDown === 'Stowe'){
+    window.open('../html/stowe.html','_self');
+  } else if (dropDown === 'Telluride'){
+    window.open('../html/telluride.html','_self');
+  } else if (dropDown === 'Tramso'){
+    window.open('../html/tramso.html','_self');
+  } else if (dropDown === 'Zermatt'){
+    window.open('../html/zermatt.html','_self');
+  } else if (dropDown === 'Cabo-San-Lucas'){
+    window.open('../html/cabo-san-lucas.html','_self');
+  } else if (dropDown === 'Granada'){
+    window.open('../html/granada.html','_self');
+  } else if (dropDown === 'Los-Angeles'){
+    window.open('../html/los-angeles.html','_self');
+  } else if (dropDown === 'Phuket'){
+    window.open('../html/phuket.html','_self');
+  }
+}
+
 // A function that goes through destArray and finds the 'sun' or 'snow' destinations based off of what the user chooses.
 function weather(sunOrSnow) {
   var choiceArray = [];
@@ -83,6 +104,7 @@ function handleChoice(event) {
 sunEl[0].addEventListener('click', handleChoice);
 
 snowEl[0].addEventListener('click', handleChoice);
+
 
 
 

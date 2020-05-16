@@ -13,9 +13,7 @@
    
     <nav>
       <form>
-        <!-- <label>Destinations</label> -->
-          <select id="dest" name="dest"> <!-- NEED TO FIGURE OUT LINKING ON DROPDOWN -->
-              <!-- <option value="" id = "placeholder">Destinations</option> -->
+          <select id="dest" name="dest" onchange="dropDownSelection()">
               <option value="">Browse Destinations</option>
               <option value="Stowe">Stowe, Vermont</option>
               <option value="Telluride">Telluride, Colorado</option>
@@ -27,7 +25,6 @@
               <option value="Los-Angeles">Los Angeles, California</option>
               <option value="Phuket">Phuket, Thailand</option>
           </select>
-       <!-- <input id="click" type="click" value="click"/>  need to get rid of submit box -->
       </form>
       <!-- <form>
         <label>Browse By Category</label>
