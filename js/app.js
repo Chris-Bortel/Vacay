@@ -20,14 +20,14 @@ function Destination(name, path, sun = 0, snow = 0) {
 }
 
 // instantiate objects
-new Destination('Los Angeles', '../html/los-angeles.html', true);
-new Destination('Cabo San Lucas', '../html/cabo-san-lucas.html', true);
-new Destination('Granada', '../html/granada.html', true);
-new Destination('Phuket', '../html/phuket.html', true);
-new Destination('Stowe', '../html/stowe.html', '', true);
-new Destination('Telluride', '../html/telluride.html', '', true);
-new Destination('Tramsø', '../html/tramso.html', '', true);
-new Destination('Zermatt', '../html/zermatt.html', '', true);
+new Destination('Los Angeles', './los-angeles.html', true);
+new Destination('Cabo San Lucas', './cabo-san-lucas.html', true);
+new Destination('Granada', './granada.html', true);
+new Destination('Phuket', './phuket.html', true);
+new Destination('Stowe', './stowe.html', '', true);
+new Destination('Telluride', './telluride.html', '', true);
+new Destination('Tramsø', './tramso.html', '', true);
+new Destination('Zermatt', './zermatt.html', '', true);
 
 //takes in user selection on the dropdopwn menu and directs user to correct destinaton page
 function dropDownSelection(){
@@ -99,6 +99,22 @@ sunEl[0].addEventListener('click', handleChoice);
 
 snowEl[0].addEventListener('click', handleChoice);
 
+// *************Local Storage************
+
+
+// 1. TODO: Function that stores information to local storage coverts from object --> JSON
+
+// 2. TODO: Function that pulls information from local storage coverts from JSON --> back through constructor ---> object
+
+// 3. TODO: Event listener/handle for save to local storage button (should include function above that stores info to local storage
+
+// 4. TODO: DOM manipulation for saved destinations page that displays users save pages
+
+// 5. TODO: Event listener/handle to pull info from local storage ( should include DOM manipulation above)
+
+// 6. TODO: Prompt for user to enter their name (Modal?) RESEARCH REQUIRED BEFORE CODING
+
+// 7. TODO: Create a message that shows up after user has successfully saved a destination. (document.write maybe?)
 
 
 
