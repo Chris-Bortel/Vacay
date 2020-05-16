@@ -3,7 +3,10 @@
 //global variables
 var destArray = [];
 
-var sectionEl = document.getElementById('criteria');
+var sunEl = document.getElementsByClassName('flip-box-back-2');
+
+var snowEl = document.getElementsByClassName('flip-box-back');
+
 
 //constructor function
 
@@ -28,16 +31,14 @@ new Destination('Zermatt', '../html/zermatt.html', '', true);
 console.log(destArray);
 
 // A function that goes through destArray and finds the 'sun' or 'snow' destinations based off of what the user chooses.
-function weather(userChoice) {
+function weather(sunOrSnow) {
   var choiceArray = [];
   for (var i = 0; i < destArray.length; i++) {
-    if (userChoice.sun === destArray[i].sun) {
+    if (sunOrSnow.sun === destArray[i].sun) {
       choiceArray.push(destArray[i]);
-      console.log('Sunny');
     }
-    if (userChoice.snow === destArray[i].snow) {
+    if (sunOrSnow.snow === destArray[i].snow) {
       choiceArray.push(destArray[i]);
-      console.log('Snowy');
     }
   }
   console.log(choiceArray);
@@ -45,65 +46,44 @@ function weather(userChoice) {
 }
 
 
+function randomizer(array) {
+  var randomNumber =  Math.floor(Math.random() * array.length);
+  console.log(array.length);
+  console.log(randomNumber);
+  return randomNumber;
+}
+
 // Handler Function listener detects click on category.
 // handler function() hears a click; create Object; determines if sun or snow and sets UserChoice.sun or UserChoice.snow to true as appropriate; pass UserChoice in to weather();
 function handleChoice(event) {
   event.preventDefault();
+
+  var criteriaClicked = event.path[1].id;
+  var criteriaClicked2 = event.path[2].id;
+
+  console.log(criteriaClicked);
+  console.log(criteriaClicked2);
+  console.log(event);
+
   var sunOrSnow = {
     sun: false,
     snow: false
   };
-  var criteriaClicked = event.target.textContent;
-  console.log(criteriaClicked);
-  if (criteriaClicked === 'Ski, Hike, Frolic!') {
+
+  if ((criteriaClicked || criteriaClicked2) === 'Snow') {
     sunOrSnow.snow = true;
   }
-  if (criteriaClicked === 'Vitamin D!') {
+  if ((criteriaClicked || criteriaClicked2) === 'Sun') {
     sunOrSnow.sun = true;
   }
   weather(sunOrSnow);
   console.log(sunOrSnow);
 }
 
-sectionEl.addEventListener('click', handleChoice);
+sunEl[0].addEventListener('click', handleChoice);
+
+snowEl[0].addEventListener('click', handleChoice);
 
 
-// want to randomize destArray.length and then put that array of eight into the weather() in order to separate the destinations into sun and snow destinations.
-
-// function randomizer(max) {
-//   return Math.floor(Math.random() * max);
-// }
-
-// // makes an array of the randomized numbers
-// function fillArray() {
-//   while (randArray.length < destArray.length) {
-//     var randDest = randomizer(destArray.length);
-//     if (randArray.includes(randDest)) {
-//       console.log('repeat repeat');
-//     } else {
-//       randArray.push(randDest);
-//     }
-//   }
-// }
-// fillArray()
-
-// // sun and snow array maker
-// // uses fillArray to make a random array of destinations, and then sort the destinations into a sun or snow array. 
-// function weather(destArray) {
-//   fillArray();
-//   for (var i = 0; i < randArray.length; i++) {
-//     if (destArray[randArray[i]].sun === true) {
-//       sunArray.push(destArray[randArray[i]]);
-//       console.log('Sunny');
-//     } else {
-//       snowArray.push(destArray[randArray[i]]);
-//       console.log('snowy')
-//     }
-//   }
-// }
-// weather(destArray);
-
-
-// // TODO: Make sure that if they go back to the quiz page, that we do not start the randomizer over
 
 
