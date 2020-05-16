@@ -16,11 +16,8 @@
     <a href="../html/saved.html">Saved Destinations</a>
 
     <nav>
-      <!-- dropdown menus will go here! -->
       <form>
-        <!-- <label>Destinations</label> -->
-          <select id="dest" name="dest"> <!-- NEED TO FIGURE OUT LINKING ON DROPDOWN -->
-              <!-- <option value="" id = "placeholder">Destinations</option> -->
+        <select id="dest" name="dest" onchange="dropDownSelection()">
               <option value="">Browse Destinations</option>
               <option value="Stowe">Stowe, Vermont</option>
               <option value="Telluride">Telluride, Colorado</option>
@@ -32,7 +29,6 @@
               <option value="Los-Angeles">Los Angeles, California</option>
               <option value="Phuket">Phuket, Thailand</option>
           </select>
-       <!-- <input id="click" type="click" value="click"/>  need to get rid of submit box -->
       </form>
       <!-- <form>
         <label>Browse By Category</label>
@@ -76,6 +72,7 @@
     </aside>
     <article>
       <h1 id = "hero">Los Angeles</h1>
+      <img src="../img/los-angeles-sunset.jpg">
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam voluptatem impedit quaerat nulla saepe eum natus pariatur laudantium architecto temporibus similique sapiente est, ab facilis atque nesciunt voluptas expedita? Nisi.
       <br>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt aut debitis at aperiam est quia dolor! Amet sit deserunt necessitatibus a, laborum, aperiam magni voluptatibus porro quasi harum facilis molestias.
