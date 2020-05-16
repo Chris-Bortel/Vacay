@@ -71,8 +71,6 @@ function randomizer(array) {
   return randomNumber;
 }
 
-
-
 // Handler Function listener detects click on category.
 // handler function() hears a click; create Object; determines if sun or snow and sets UserChoice.sun or UserChoice.snow to true as appropriate; pass UserChoice in to weather();
 function handleChoice(event) {
@@ -98,19 +96,8 @@ function handleChoice(event) {
 }
 
 //event listener 
-var saveDestination = document.getElementById('Los Angeles');
-// console.log(saveDestination);
-function handleSave(event) {
-  event.preventDefault();
-  console.log(event);
-  var userName = prompt('Enter Name');
-  console.log(userName);
-}
-saveDestination.addEventListener('click', handleSave);
-console.log(event);
 
 sunEl[0].addEventListener('click', handleChoice);
-
 snowEl[0].addEventListener('click', handleChoice);
 
 // *************Local Storage************
@@ -131,8 +118,6 @@ snowEl[0].addEventListener('click', handleChoice);
 //// create prompt that will tell you that you have saved a destinatation
 // create variable that houses username
 
-// key = name , value = destination object
-// object that we already created will take us to saved web page
 
 
 
