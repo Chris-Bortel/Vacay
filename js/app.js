@@ -33,24 +33,24 @@ new Destination('Zermatt', '../html/zermatt.html', '', true);
 function dropDownSelection(){
   var dropDown = document.getElementById('dest').value;
   if (dropDown === 'Stowe'){
-    window.open('../html/stowe.html','_self');
+    window.open(destArray[4].path,'_self');
   } else if (dropDown === 'Telluride'){
-    window.open('../html/telluride.html','_self');
+    window.open(destArray[5].path,'_self');
   } else if (dropDown === 'Tramso'){
-    window.open('../html/tramso.html','_self');
+    window.open(destArray[6].path,'_self');
   } else if (dropDown === 'Zermatt'){
-    window.open('../html/zermatt.html','_self');
+    window.open(destArray[7].path,'_self');
   } else if (dropDown === 'Cabo-San-Lucas'){
-    window.open('../html/cabo-san-lucas.html','_self');
+    window.open(destArray[1].path,'_self');
   } else if (dropDown === 'Granada'){
-    window.open('../html/granada.html','_self');
+    window.open(destArray[2].path,'_self');
   } else if (dropDown === 'Los-Angeles'){
-    window.open('../html/los-angeles.html','_self');
+    window.open(destArray[0].path,'_self');
   } else if (dropDown === 'Phuket'){
-    window.open('../html/phuket.html','_self');
+    window.open(destArray[3].path,'_self');
   }
 }
-
+console.log(destArray);
 // A function that goes through destArray and finds the 'sun' or 'snow' destinations based off of what the user chooses.
 function weather(sunOrSnow) {
   var choiceArray = [];
