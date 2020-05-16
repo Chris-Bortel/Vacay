@@ -28,8 +28,8 @@ new Destination('Stowe', '../html/stowe.html', '', true);
 new Destination('Telluride', '../html/telluride.html', '', true);
 new Destination('Tramsø', '../html/tramso.html', '', true);
 new Destination('Zermatt', '../html/zermatt.html', '', true);
-console.log(destArray);
 
+//takes in user selection on the dropdopwn menu and directs user to correct destinaton page
 function dropDownSelection(){
   var dropDown = document.getElementById('dest').value;
   if (dropDown === 'Stowe'){
@@ -62,15 +62,12 @@ function weather(sunOrSnow) {
       choiceArray.push(destArray[i]);
     }
   }
-  console.log(choiceArray);
   return choiceArray;
 }
 
-
+//outputs random number for index of destination
 function randomizer(array) {
   var randomNumber =  Math.floor(Math.random() * array.length);
-  console.log(array.length);
-  console.log(randomNumber);
   return randomNumber;
 }
 
@@ -81,10 +78,6 @@ function handleChoice(event) {
 
   var criteriaClicked = event.path[1].id;
   var criteriaClicked2 = event.path[2].id;
-
-  console.log(criteriaClicked);
-  console.log(criteriaClicked2);
-  console.log(event);
 
   var sunOrSnow = {
     sun: false,
@@ -97,8 +90,9 @@ function handleChoice(event) {
   if ((criteriaClicked || criteriaClicked2) === 'Sun') {
     sunOrSnow.sun = true;
   }
-  weather(sunOrSnow);
-  console.log(sunOrSnow);
+  var userChoiceArr = weather(sunOrSnow);
+  var randomIndex = randomizer(userChoiceArr);
+  window.open(userChoiceArr[randomIndex].path,'_self');
 }
 
 sunEl[0].addEventListener('click', handleChoice);
