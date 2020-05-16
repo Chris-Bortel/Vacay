@@ -95,18 +95,36 @@ function handleChoice(event) {
   window.open(userChoiceArr[randomIndex].path,'_self');
 }
 
-sunEl[0].addEventListener('click', handleChoice);
+//event listener 
 
+sunEl[0].addEventListener('click', handleChoice);
 snowEl[0].addEventListener('click', handleChoice);
 
 // *************Local Storage************
+
+//  TODO: Event listener/handle for save to local storage button (should include function above that stores info to local storage
+// 
+
+
+
+// click saved destination: user inputs name : how does savedLocal know where to save that name?
+// --- listener event set only to the saved button.
+// --- somehow return the info from the event handler. when button is pushed, we will know what path will be saved
+// --- reset handle event on click, then 
+// --- create saved array, and then push random index to ... if user runs the thing again 
+// assign id for every button on each page: use event target id : if ___ === whatever is in constructor and then push to saved array. 
+
+
+//// create prompt that will tell you that you have saved a destinatation
+// create variable that houses username
+
+
 
 
 // 1. TODO: Function that stores information to local storage coverts from object --> JSON
 
 // 2. TODO: Function that pulls information from local storage coverts from JSON --> back through constructor ---> object
 
-// 3. TODO: Event listener/handle for save to local storage button (should include function above that stores info to local storage
 
 // 4. TODO: DOM manipulation for saved destinations page that displays users save pages
 
