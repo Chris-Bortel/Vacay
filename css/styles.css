@@ -1,4 +1,4 @@
-/* #255766--Blue Green; #F15A29--Orange; #802E1B--Cranberry; whitesmoke
+/* #255766--Blue Green; #F15A29--rgb(197, 91, 49); #802E1B--Cranberry; whitesmoke
 Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
  Portada Reg = body: font-family: portada, serif; font-weight: 400; font-style: normal;
 */
@@ -147,13 +147,13 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
 
 /* Style the back side */
 .flip-box-back {
-  background-color: #662027;
+  background-color: #255766;
   color: whitesmoke;
   transform: rotateY(180deg);
 }
 
 .flip-box-back-2 {
-  background-color: #D35A29;
+  background-color: rgb(197, 91, 49);
   color: whitesmoke;
   transform: rotateY(180deg);
 }

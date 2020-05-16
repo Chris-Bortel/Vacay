@@ -6,11 +6,11 @@ Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Luc
 .container {
   background-color: whitesmoke;
 }
-/* sun pages blue #255766--Blue Green with orange Orange--#F15A29 accent 
+/* sun pages blue #255766--Blue Green with orange Orange--#CF5B2F accent 
 whitesmoke on both */
 
 .sun{
-background-color:#D35A29;
+background-color:#CF5B2F;
 }
 
 .sun p,.sun h1, .sun aside, .sun #dest{
