@@ -6,14 +6,31 @@ Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Luc
 .container {
   background-color: whitesmoke;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.save-destination{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 16%;
+
+}
+
 /* sun pages blue #255766--Blue Green with orange Orange--#CF5B2F accent 
 whitesmoke on both */
+
 
 .sun{
 background-color:#CF5B2F;
 }
 
-.sun p,.sun h1, .sun aside, .sun #dest{
+.sun p,.sun h1, .sun h2, .sun li, .sun #dest{
   color: #255766;
 }
 
@@ -67,12 +84,12 @@ main {
   padding: 0% 10%;
 }
 
-header a {
+a {
   text-decoration: none;
   color: #662027;
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   border-right: 5px solid #662027;
   border-left: 5px solid #662027;
   padding: 2px 8px;
@@ -80,34 +97,15 @@ header a {
 
 
 
-header a:hover{
+a:hover{
   background-color: #662027;
   color:whitesmoke
 }
 
 header{
-  padding: 5%;
+  padding: 5% 5% 2%;
   }
   
-
-button a {
-  background-color: whitesmoke ;
-  color: #662027; 
-  border-left: 5px solid #662027;
-  border-right: 5px solid #662027;
-  padding: 2px 8px;
-}
-
-button :hover{
-  background-color: #662027;
-  color: whitesmoke; 
-}
-
-button {
-  border: hidden;
-  margin-left: 30px;
-}
-
 nav {
   float: right;
   }
@@ -127,26 +125,47 @@ h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 42px;
   text-align: center;
-  padding-top: 30px;
   color: #662027;
+  text-align: center;
+  margin: 0px auto 30px;
 }
 
-aside {
-  float: left;
-  margin: 50px 0px 0px 0px;
+h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 26px;
+  text-align: center;
   color: #662027;
+  text-align: center;
+  margin: 0px auto 15px;
+  text-decoration: underline;
+}
+
+#hero {
+  margin: 0px auto;
 }
 
 article {
-  margin: 0px auto 0px 80px;
+  margin: 50px auto;
 }
 
-#hero{
-  margin: 50px 30px;
-  height: 500px;
-  width: auto;
+#info-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 100px;
 }
 
+li {
+  text-align: center;
+  font-size: 15px;
+  font-family: portada, serif; font-weight: 400; font-style: normal;
+  line-height: 1.5;
+  color: #662027;
+}
+
+#temps-list{
+  columns: 2;
+}
 
 
 p {
@@ -156,7 +175,7 @@ p {
   font-size: 15px;
   font-family: portada, serif; font-weight: 400; font-style: normal;
   line-height: 1.5;
-  margin: 60px 30px;
+  margin: 60px auto;
 }
 
 
@@ -201,7 +220,7 @@ footer p {
 
 footer{
   text-align: left;
-  margin: 250px auto 0px;
+  margin: 125px auto 0px;
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
@@ -219,7 +238,6 @@ footer{
 
   h1 {
     font-size: 36px;
-    padding-top: 50px;
   }
 
   h3 {
@@ -229,7 +247,8 @@ footer{
     font-size: 16px;
   }
 
-  #hero {
-    height: 400px;
-  }
+  /* #hero {
+    height: 300px;
+    width: 600px;
+  } */
 }
