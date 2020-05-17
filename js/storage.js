@@ -1,5 +1,11 @@
 'use strict';
 
+var userName = '';
+
+//match the current page we are viewing with the destination in our
+// destination array cache.  Used to figure out the id of click area
+//since we have multiple pages with Save This Destination "buttons"
+
 var currentPage = window.location.pathname;
 console.log (currentPage);
 for (var i = 0; i < destArray.length; i++){
@@ -11,11 +17,13 @@ for (var i = 0; i < destArray.length; i++){
   }
 }
 
-//Handler function attached to Save This Destination click
+//Handler function attached to Save This Destination click without overwriting
+//previous saves
+
 function handleSave(event) {
   event.preventDefault();
   console.log(event);
-  var userName = prompt('Enter Name');
+  userName = prompt('Enter Name');
   var favDestinations = event.target.id;
   var existingDest = JSON.parse(localStorage.getItem(userName));
 
@@ -23,7 +31,6 @@ function handleSave(event) {
   if(existingDest === null) {
     existingDest = [];
   }
-  console.log (existingDest);
 
   //find and stringify info we want to store
 
@@ -36,17 +43,19 @@ function handleSave(event) {
   console.log (existingDest);
 
   //push new info and return all entries to storage
+  /////////////////////////////////////
+  ///Need to check for duplicates and not push//////////////////////
   existingDest.push(storeThis);
   localStorage.setItem(userName, JSON.stringify(existingDest));
+
+  ////// Message Modal function call
 }
 
-//https://stackoverflow.com/questions/19635077/adding-objects-to-array-in-localstorage
-
+////////////////////////////////////////
+//ALL IS WORKING AND TESTED ABOVE HERE
 
 //function to get from local storage, put back through constructor
-function loadStoredDestination(){
-
-  var userName = prompt('Enter Name');
+function retrieveStoredDestination(){
 
   if (localStorage.getItem(userName)){
     var loadDestination = JSON.parse(localStorage.getItem(userName));
@@ -55,10 +64,20 @@ function loadStoredDestination(){
         loadDestination[i].sun,loadDestination[i].snow);
     }
   }
+  return Destination;
 }
 
+// function renderSaved (){
+//   //function to send user to Saved page
+//   window.open ('saved.html');
+//   //and render saved destinations
+//   retrieveStoredDestination();
+//   //loop through all objects created by retrieveStoredDestination
+//   document.write(Destination.path);
+// }
 
-// TODO: Figure out how to fix the Uncaught TypeError
 
 saveDestination.addEventListener('click', handleSave);
 
+// TODO: Figure out how to fix the Uncaught TypeError
+// site for how to not overwrite storage
