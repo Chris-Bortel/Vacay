@@ -11,21 +11,69 @@ for (var i = 0; i < destArray.length; i++){
   console.log(saveDestination);
 }
 
+function saveToLocalStorage(name,infoToSave){
+  var destinationsToSave = JSON.stringify(infoToSave);
+  console.log(destinationsToSave);
+  localStorage.setItem(name, destinationsToSave);
+}
+
+
+function loadLocalStorage(name){
+
+  var localStorageDestinations = JSON.parse(localStorage.getItem(name));
+
+  console.log(localStorageDestinations);
+  console.log(localStorageDestinations.length);
+  // for (var i = 0; i < localStorageDestinations.length; i++){
+  //   var sameOldSavedDestinations = new Destination(
+  //     localStorageDestinations[i].name,
+  //     localStorageDestinations[i].path,
+  //     localStorageDestinations[i].sun,
+  //     localStorageDestinations[i].snow
+  //   );
+  //   console.log(localStorageDestinations);
+  // }
+
+  return localStorageDestinations;
+}
+
+function addToLocalStorage(localStorageArr, destinationToAdd){
+  localStorageArr.push(destinationToAdd);
+  console.log(localStorageArr);
+  // tempArray.push(destinationToAdd);
+  // console.log(tempArray);
+  // return tempArray;
+  return localStorageArr;
+}
 
 function handleSave(event) {
   event.preventDefault();
   console.log(event);
+
   var userName = prompt('Enter Name');
+
   var favDestinations = event.target.id;
-
-  for (var i = 0; i < destArray.length; i++){
-    if (favDestinations === destArray[i].name){
-      var storedDestination = JSON.stringify(destArray[i]);
-      localStorage.setItem(userName, storedDestination);
-
+  if(localStorage.getItem(userName) === null){
+    for (var i = 0; i < destArray.length; i++){
+      if (favDestinations === destArray[i].name){
+        var savedArray = [];
+        savedArray.push(destArray[i]);
+        saveToLocalStorage(userName,savedArray);
+      }
+    }
+  }else{
+    for(i = 0; i < destArray.length;i++){
+      console.log(favDestinations);
+      console.log(destArray[i].name);
+      if(favDestinations === destArray[i].name){
+        var savedDestinations = loadLocalStorage(userName);
+        var addToSaveDestinations = addToLocalStorage(savedDestinations, destArray[i]);
+        console.log(addToSaveDestinations);
+        saveToLocalStorage(userName,addToSaveDestinations);
+        break;
+      }
     }
   }
-  console.log(userName);
 }
 
 
@@ -36,4 +84,3 @@ function handleSave(event) {
 // TODO: Figure out how to fix the Uncaught TypeError
 
 saveDestination.addEventListener('click', handleSave);
-
