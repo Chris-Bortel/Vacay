@@ -30,17 +30,21 @@ whitesmoke on both */
 background-color:#CF5B2F;
 }
 
-.sun p,.sun h1, .sun h2, .sun li, .sun #dest{
+.sun h3{
+  color: #CF5B2F
+}
+
+.sun p,.sun h1, .sun h2,.sun li, .sun #dest{
   color: #255766;
 }
 
-.sun header a, .sun footer a {
+.sun a {
   color:#255766;
   border-right: 5px solid #255766;
   border-left: 5px solid #255766;
 }
 
-.sun header a:hover, .sun footer a:hover {
+.sun a:hover {
   color: whitesmoke;
   background-color: #255766;
 }
@@ -83,11 +87,20 @@ body {
 main {
   padding: 0% 10%;
 }
+/* a {
+  text-decoration: none;
+  color: #662027; 
+  font-size: 16px;
+  font-weight: 300; 
+  font-style: normal;
+} */
 
 a {
   text-decoration: none;
+  text-align: center;
   color: #662027;
   font-size: 16px;
+  font-family: portada, serif; 
   font-weight: 500;
   margin-bottom: 0px;
   border-right: 5px solid #662027;
@@ -140,19 +153,40 @@ h2 {
   text-decoration: underline;
 }
 
-#hero {
-  margin: 0px auto;
+h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #662027;
+  text-align: center;
+  font-weight: 500;
 }
 
-article {
-  margin: 50px auto;
+
+#hero {
+  margin: 0px auto 40px;
+}
+
+#scroll {
+  height: 225px;
+  overflow: scroll;
+  text-align: left;
+  font-size: 15px;
+  font-family: portada, serif; font-weight: 400; font-style: normal;
+  line-height: 1.5;
+  margin: 10px auto 50px;
+  width: 90%;
+  padding-bottom: 20px;
 }
 
 #info-links {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 100px;
+  margin-top: 80px;
+}
+#links a, #events a{
+  border: none;
 }
 
 li {
@@ -161,7 +195,9 @@ li {
   font-family: portada, serif; font-weight: 400; font-style: normal;
   line-height: 1.5;
   color: #662027;
+  border: none;
 }
+
 
 #temps-list{
   columns: 2;
@@ -170,24 +206,14 @@ li {
 
 p {
   height: 200px;
-  overflow: scroll;
   text-align: left;
   font-size: 15px;
   font-family: portada, serif; font-weight: 400; font-style: normal;
-  line-height: 1.5;
-  margin: 60px auto;
+  line-height: 1.2;
+  margin: 0px auto;
 }
 
 
-a {
-  text-decoration: none;
-  color: #662027; 
-  text-align: center;
-  font-size: 16px;
-  font-family: portada, serif; 
-  font-weight: 300; 
-  font-style: normal;
-}
 
 
 footer a {
@@ -220,7 +246,7 @@ footer p {
 
 footer{
   text-align: left;
-  margin: 125px auto 0px;
+  margin: 100px auto 0px;
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
