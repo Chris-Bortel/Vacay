@@ -1,18 +1,18 @@
 'use strict';
 
+console.log('i am alive')
 var userName = '';
-
 //match the current page we are viewing with the destination in our
 // destination array cache.  Used to figure out the id of click area
 //since we have multiple pages with Save This Destination "buttons"
 
 var currentPage = window.location.pathname;
-console.log (currentPage);
+// console.log (currentPage);
 for (var i = 0; i < destArray.length; i++){
   if (currentPage === destArray[i].path){
-    console.log(destArray[i].path);
+    // console.log(destArray[i].path);
     var saveDestination = document.getElementById(destArray[i].name);
-    console.log(saveDestination);
+    // console.log(saveDestination);
     break;
   }
 }
@@ -24,6 +24,8 @@ function handleSave(event) {
   event.preventDefault();
   console.log(event);
   userName = prompt('Enter Name');
+  console.log(userName)
+
   var favDestinations = event.target.id;
   var existingDest = JSON.parse(localStorage.getItem(userName));
 
@@ -33,24 +35,23 @@ function handleSave(event) {
   }
 
   //find and stringify info we want to store
-
   for (var i = 0; i < destArray.length; i++){
     if (favDestinations === destArray[i].name){
       var storeThis = JSON.stringify(destArray[i]);
       break;
     }
+handleSave();
+
   }
   console.log (existingDest);
 
   //push new info and return all entries to storage
-  /////////////////////////////////////
-  ///Need to check for duplicates and not push//////////////////////
   existingDest.push(storeThis);
   localStorage.setItem(userName, JSON.stringify(existingDest));
-
-  ////// Message Modal function call
+  /// TODO: Need to check for duplicates and not push
+  
+  ////// TODO: Message Modal function call
 }
-
 ////////////////////////////////////////
 //ALL IS WORKING AND TESTED ABOVE HERE
 
@@ -59,6 +60,7 @@ function retrieveStoredDestination(){
 
   if (localStorage.getItem(userName)){
     var loadDestination = JSON.parse(localStorage.getItem(userName));
+    // console.log('I am the loaded destination', loadDestination);
     for (var i = 0; i < loadDestination.length; i++){
       new Destination(loadDestination[i].name, loadDestination[i].path,
         loadDestination[i].sun,loadDestination[i].snow);
@@ -66,18 +68,18 @@ function retrieveStoredDestination(){
   }
   return Destination;
 }
-
 // function renderSaved (){
-//   //function to send user to Saved page
-//   window.open ('saved.html');
-//   //and render saved destinations
-//   retrieveStoredDestination();
-//   //loop through all objects created by retrieveStoredDestination
-//   document.write(Destination.path);
-// }
-
-
-saveDestination.addEventListener('click', handleSave);
+  //   //function to send user to Saved page
+  //   window.open ('saved.html');
+  //   //and render saved destinations
+  //   retrieveStoredDestination();
+  //   //loop through all objects created by retrieveStoredDestination
+  //   document.write(Destination.path);
+  // }
+  
+  
+  saveDestination.addEventListener('click', handleSave);
+  retrieveStoredDestination();
 
 // TODO: Figure out how to fix the Uncaught TypeError
 // site for how to not overwrite storage
