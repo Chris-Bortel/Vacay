@@ -60,7 +60,7 @@ function dropDownSelection(){
     window.open(destArray[3].path,'_self');
   }
 }
-console.log(destArray);
+// console.log(destArray);
 // A function that goes through destArray and finds the 'sun' or 'snow' destinations based off of what the user chooses.
 function weather(sunOrSnow) {
   var choiceArray = [];
