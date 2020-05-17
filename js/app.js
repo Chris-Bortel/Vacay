@@ -20,11 +20,11 @@ function Destination(name, path, sun = 0, snow = 0) {
 }
 
 // instantiate objects
-new Destination('Los Angeles', '/Vacay/los-angeles.html', true);
+new Destination('Los Angeles', '/los-angeles.html', true);
 new Destination('Cabo San Lucas', '/Vacay/cabo-san-lucas.html', true);
 new Destination('Granada', '/Vacay/granada.html', true);
 new Destination('Phuket', '/Vacay/phuket.html', true);
-new Destination('Stowe', '/Vacay/stowe.html', '', true);
+new Destination('Stowe', '/stowe.html', '', true);
 new Destination('Telluride', '/Vacay/telluride.html', '', true);
 new Destination('Tramsø', '/Vacay/tramso.html', '', true);
 new Destination('Zermatt', '/Vacay/zermatt.html', '', true);
