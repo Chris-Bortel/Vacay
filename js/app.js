@@ -20,14 +20,14 @@ function Destination(name, path, sun = 0, snow = 0) {
 }
 
 // instantiate objects
-new Destination('Los Angeles', 'los-angeles.html', true);
-new Destination('Cabo San Lucas', 'cabo-san-lucas.html', true);
-new Destination('Granada', 'granada.html', true);
-new Destination('Phuket', 'phuket.html', true);
-new Destination('Stowe', 'stowe.html', '', true);
-new Destination('Telluride', 'telluride.html', '', true);
-new Destination('Tramsø', 'tramso.html', '', true);
-new Destination('Zermatt', 'zermatt.html', '', true);
+new Destination('Los Angeles', '/los-angeles.html', true);
+new Destination('Cabo San Lucas', '/cabo-san-lucas.html', true);
+new Destination('Granada', '/granada.html', true);
+new Destination('Phuket', '/phuket.html', true);
+new Destination('Stowe', '/stowe.html', '', true);
+new Destination('Telluride', '/telluride.html', '', true);
+new Destination('Tramsø', '/tramso.html', '', true);
+new Destination('Zermatt', '/zermatt.html', '', true);
 
 //takes in user selection on the dropdopwn menu and directs user to correct destinaton page
 function dropDownSelection(){
