@@ -22,18 +22,6 @@ function loadLocalStorage(name){
 
   var localStorageDestinations = JSON.parse(localStorage.getItem(name));
 
-  console.log(localStorageDestinations);
-  console.log(localStorageDestinations.length);
-  // for (var i = 0; i < localStorageDestinations.length; i++){
-  //   var sameOldSavedDestinations = new Destination(
-  //     localStorageDestinations[i].name,
-  //     localStorageDestinations[i].path,
-  //     localStorageDestinations[i].sun,
-  //     localStorageDestinations[i].snow
-  //   );
-  //   console.log(localStorageDestinations);
-  // }
-
   return localStorageDestinations;
 }
 
