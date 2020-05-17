@@ -22,6 +22,13 @@ Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Luc
 
 }
 
+.icon{
+  float: right;
+  margin-top: -125px;
+  height: 150px;
+  width: 150px;
+}
+
 /* sun pages blue #255766--Blue Green with orange Orange--#CF5B2F accent 
 whitesmoke on both */
 
@@ -246,7 +253,7 @@ footer p {
 
 footer{
   text-align: left;
-  margin: 100px auto 0px;
+  margin: 80px auto 0px;
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
