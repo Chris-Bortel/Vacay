@@ -3,36 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/reset.css" alt="meyers-reset">
-  <link rel="stylesheet" href="/css/destinations.css" alt="">
-  <title>Travel Fever</title>
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/Destinations.css" type="text/css">
+  <title>Stowe, Vermont</title>
 </head>
-<body>
+
+<!-- Container and body margins make snow or sun page border -->
+<body class = "snow">
+  <div class = "container">
   <header>
-    <a href="" id="Stowe" class="save-destination">Save This Destination</a>
+    <a href="./index.html">Back to Home</a>
+    <a href="./saved.html">Saved Destinations</a>
 
     <nav>
-      <h1>Vacay Travel Planner</h1>
-      <h2>Destination-7</h2>
-      <ul>
-        <li><a href="../html/index.html">Landing Page</a></li>
-        <li><a href="../html/saved.html">Saved Destinations</a></li>
-        <br>
-        <li><a href="../html/dest1.html">Destination-1</a></li>
-        <li><a href="../html/dest2.html">Destination-2</a></li>
-        <li><a href="../html/dest3.html">Destination-3</a></li>
-        <li><a href="../html/dest4.html">Destination-4</a></li>
-        <li><a href="../html/dest5.html">Destination-5</a></li>
-        <li><a href="../html/dest6.html">Destination-6</a></li>
-        <li><a href="../html/dest7.html">Destination-7</a></li>
-        <li><a href="../html/dest8.html">Destination-8</a></li>
-        <br>
-        <li><a href="../html/about.html">About Us</a></li>
-      </ul>
+      <form>
+        <select id="dest" name="dest" onchange="dropDownSelection()">
+              <option value="">Browse Destinations</option>
+              <option value="Stowe">Stowe, Vermont</option>
+              <option value="Telluride">Telluride, Colorado</option>
+              <option value="Tramso">Tramsø, Norway</option>
+              <option value="Zermatt">Zermatt, Switzerland</option>
+              <option value="">-----------</option>
+              <option value="Cabo-San-Lucas">Cabo San Lucas, Mexico</option>
+              <option value="Granada">Granada, Spain</option>
+              <option value="Los-Angeles">Los Angeles, California</option>
+              <option value="Phuket">Phuket, Thailand</option>
+          </select>
+      </form>
+      <!-- <form>
+        <label>Browse By Category</label>
+          <select id="dest" name="dest">
+              <option value="Snow">Snow</option>
+              <option value="Sun">Sun</option>
+          </select>
+      </form> STRETCH GOAL!!!  -->
     </nav>
   </header>
-  <script src="./js/app.js" ></script>
+  <main>
+    <section id = "hero">
+      <h1 >Stowe</h1>
+      <img src="./img/stowe.jpg" class = "center">
+    </section >
+      <article id = "scroll">
+        <h3>Experience The Green Mountains</h3>
+         <p> <br><br>Stowe is a town in Lamoille County, Vermont, United States. The population
+           was 4,314 at the 2010 census. The town lies on Vermont Route 108, locally known as 
+           the Mountain Road. It is nicknamed 'The Ski Capital of the East' and is home to Stowe 
+           Mountain Resort, a ski facility with terrain on Mount Mansfield and Spruce Peak.
+
+          <br><br>Only Stowe, Vermont combines a classic 200-year-old village with the natural 
+          beauty and serenity of Mt. Mansfield, Vermont's highest peak. This unique juxtaposition 
+          imbues Stowe with a character reminiscent of great European mountain resorts. A true 
+          four-season destination of international renown, Stowe offers endless opportunities to 
+          enjoy the outdoors, from summer activities to world-class skiing, and scores of unique 
+          ways to “Escape the Ordinary.” Visitors searching for great quality and value will find 
+          it in Stowe’s 60+ unique shops, 40+ restaurants, and dozens of different lodging 
+          establishments, ranging from full-service resort spas to quaint bed and breakfasts and 
+          country inns. Virtually all are locally owned, for a refreshing change.
+
+          
+        </p>
+      </article>
+      <a href="" id="Stowe" class="save-destination">Save This Destination</a>
+    <section id = "info-links">
+      <section id = "temps">
+        <h2>Avg Temps &#8457</h2>
+        <ul id = "temps-list"> 
+          <li>Winter</li>
+          <li>Spring</li>
+          <li>Summer</li>
+          <li>Fall</li>
+          <li> Hi 20 -- Low 4</li>
+          <li> Hi 51 -- Low 25</li>
+          <li> Hi 66 -- Low 47</li>
+          <li> Hi 57 -- Low 20</li>
+
+        </ul>
+      </section>
+      <section id = "events">
+        <ul> 
+          <h2>Annual Events</h2>
+          <li><a href = "https://gostowe.com/events/">
+            Festivals and Events</a></li>
+            <li><br></li>
+            <li><br></li>
+            <li><br></li>
+        </ul>
+      </section>
+      <section id = "links">
+        <ul> 
+          <h2>Links</h2>
+          <li><a href = "https://gostowe.com/">Info For All Seasons</a></li>
+          <li><a href = "https://www.stowe.com/">Vistor Info</a></li>
+          <li><br></li>
+          <li><br></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+  <script src="./js/app.js"></script>
   <script src="./js/storage.js"></script>
+  <footer>
+    <a href="./about.html">Meet The Team</a>
+    <p>&copy;2020  Team Vacay: Ashley Casimir, Chris Bortel, Henry Funk, Kim Damalas </p> 
+    <img src="./img/small-snow-icon.png" class = "icon">
+  </footer>
+  
+  <!-- Container and body margins make snow or sun page border -->
+</div>
 </body>
-<footer>&copy;Vacay Travel Planner 2020 </footer>
 </html>
