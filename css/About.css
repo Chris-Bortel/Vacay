@@ -19,8 +19,8 @@ body {
 }
 
 .thumbnail {
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   border: 3px solid #662027;
   margin: 20px;
 }
@@ -57,18 +57,24 @@ figcaption {
   font-family: portada, serif; font-weight: 400; font-style: normal;
 }
 
-p {
+.pitch {
   font-family: portada, serif; font-weight: 400; font-style: normal;
   text-align: left;
   color: whitesmoke;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 1.5;
   font-weight: 300;
-  margin: 50px auto 0px 150px;
+  margin: 20px auto 20px 80px;
   width: 50%;
 }
 
-
+h3 {
+  font-family: portada, serif; font-weight: 400; font-style: normal;
+  font-size: 18px;
+  margin-left: 30px;
+  text-align: left;
+  color: whitesmoke;
+}
 
 footer a {
   text-decoration: none;
