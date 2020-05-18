@@ -2,8 +2,8 @@
 
 console.log("i am alive");
 var userName = {
-  userName: ''
- } ;
+  userName: "",
+};
 var destinationList = document.getElementById("destination-list");
 //match the current page we are viewing with the destination in our
 // destination array cache.  Used to figure out the id of click area
@@ -30,7 +30,7 @@ function handleSave(event) {
   console.log(userName);
 
   var favDestinations = event.target.id;
-  var existingDest = JSON.parse(localStorage.getItem('name'));
+  var existingDest = JSON.parse(localStorage.getItem(userName));
 
   //if nothing in storage, set empty array
   if (existingDest === null) {
@@ -49,7 +49,7 @@ function handleSave(event) {
 
   //push new info and return all entries to storage
   existingDest.push(storeThis);
-  localStorage.setItem('userName', JSON.stringify(existingDest));
+  localStorage.setItem(userName, JSON.stringify(existingDest));
   /// TODO: Need to check for duplicates and not push
 
   ////// TODO: Message Modal function call
@@ -58,10 +58,10 @@ function handleSave(event) {
 //ALL IS WORKING AND TESTED ABOVE HERE
 
 //function to get from local storage, put back through constructor
-function retrieveStoredDestination() {
-  if (localStorage.getItem('userName')) {
+function retrieveStoredDestination(userName) {
+  if (localStorage.getItem(userName)) {
     //TODO: do we have a username key?
-    var loadDestination = JSON.parse(localStorage.getItem('userName'));
+    var loadDestination = JSON.parse(localStorage.getItem(userName));
     // console.log(loadDestination);
     for (var i = 0; i < loadDestination.length; i++) {
       new Destination(
@@ -78,31 +78,37 @@ function retrieveStoredDestination() {
 
   return Destination;
 }
+// retrieveStoredDestination();
+//This will reder the saved destinations to the saved page
+function renderSaved(savedArray) {
+  for (var i = 0; i < savedArray.length; i++) {
+    var destinationListUlEl = document.createElement("li");
+    console.log(destinationListUlEl);
+    destinationListUlEl.textContent = savedArray[i].name + savedArray[i].path;
+    destinationList.appendChild(destinationListUlEl);
+  }
 
-function renderSaved() {
-  retrieveStoredDestination();
+  //TODO: figure out what the index is for get elements by classname. 
+  // TODO: on event we will render the saved destination objects to the saved page.
 
-  var destinationListUlEl = document.createElement("li");
-  console.log(destinationListUlEl);
-  destinationListUlEl.textContent = this.name + this.path;
-  destinationList.appendChild(destinationListUlEl);
-  // on event we will render the saved destination objects to the saved page.
-  // on click of view saved destinations, we will retrieve and render objects that are in local storage
+  // on click of view saved destinations, we will retrieve  local storage
 
   //function to send user to Saved page
   // window.open ('saved.html', '_self');
   //and render saved destinations
   //loop through all objects created by retrieveStoredDestination
-  document.write(Destination.path);
+  // document.write(Destination.path);
 }
 
 function handleRender(event) {
-
+  var userName = prompt("Enter username ");
+  var saved = retrieveStoredDestination(userName);
+  console.log(saved);
 }
 
 saveDestination.addEventListener("click", handleSave);
 renderSaved();
-console.log(renderSaved())
+console.log(renderSaved());
 retrieveStoredDestination();
 
 // TODO: Figure out how to fix the Uncaught TypeError
