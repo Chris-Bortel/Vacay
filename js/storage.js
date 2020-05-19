@@ -1,7 +1,5 @@
 'use strict';
 
-var userName = '';
-
 //match the current page we are viewing with the destination in our
 // destination array cache.  Used to figure out the id of click area
 //since we have multiple pages with Save This Destination "buttons"
@@ -10,9 +8,7 @@ var currentPage = window.location.pathname;
 console.log (currentPage);
 for (var i = 0; i < destArray.length; i++){
   if (currentPage === destArray[i].path){
-    console.log(destArray[i].path);
     var saveDestination = document.getElementById(destArray[i].name);
-    console.log(saveDestination);
     break;
   }
 }
@@ -20,64 +16,75 @@ for (var i = 0; i < destArray.length; i++){
 //Handler function attached to Save This Destination click without overwriting
 //previous saves
 
+function loadLocalStorage(name){
+  var loadedDestinations = JSON.parse(localStorage.getItem(name));
+  return loadedDestinations;
+}
+
+function addToLocalStorage(localStorageArr, destinationToAdd){
+  for(i = 0; i < localStorageArr.length; i++){
+    if (localStorageArr[i].name === destinationToAdd.name){
+      alert('You have already saved this Destination!');
+      return localStorageArr;
+    }else{
+      localStorageArr.push(destinationToAdd);
+      return localStorageArr;
+    }
+  }
+}
+
+function saveToLocalStorage(name,infoToSave){
+  var destinationsToSave = JSON.stringify(infoToSave);
+  localStorage.setItem(name, destinationsToSave);
+}
+
+
 function handleSave(event) {
   event.preventDefault();
-  console.log(event);
-  userName = prompt('Enter Name');
+  var userName = prompt('Enter Name');
+
   var favDestinations = event.target.id;
-  var existingDest = JSON.parse(localStorage.getItem(userName));
-
-  //if nothing in storage, set empty array
-  if(existingDest === null) {
-    existingDest = [];
-  }
-
-  //find and stringify info we want to store
-
-  for (var i = 0; i < destArray.length; i++){
-    if (favDestinations === destArray[i].name){
-      var storeThis = JSON.stringify(destArray[i]);
-      break;
+  if(localStorage.getItem(userName) === null){
+    for (var i = 0; i < destArray.length; i++){
+      if (favDestinations === destArray[i].name){
+        var savedArray = [];
+        savedArray.push(destArray[i]);
+        saveToLocalStorage(userName,savedArray);
+      }
+    }
+  }else{
+    for(i = 0; i < destArray.length;i++){
+      if(favDestinations === destArray[i].name){
+        var savedDestinations = loadLocalStorage(userName);
+        var newSavedDestinations = addToLocalStorage(savedDestinations, destArray[i]);
+        saveToLocalStorage(userName,newSavedDestinations);
+        break;
+      }
     }
   }
-  console.log (existingDest);
-
-  //push new info and return all entries to storage
-  /////////////////////////////////////
-  ///Need to check for duplicates and not push//////////////////////
-  existingDest.push(storeThis);
-  localStorage.setItem(userName, JSON.stringify(existingDest));
-
-  ////// Message Modal function call
 }
 
-////////////////////////////////////////
-//ALL IS WORKING AND TESTED ABOVE HERE
 
-//function to get from local storage, put back through constructor
-function retrieveStoredDestination(){
+var savedLinks = document.getElementById('saved-links');
 
-  if (localStorage.getItem(userName)){
-    var loadDestination = JSON.parse(localStorage.getItem(userName));
-    for (var i = 0; i < loadDestination.length; i++){
-      new Destination(loadDestination[i].name, loadDestination[i].path,
-        loadDestination[i].sun,loadDestination[i].snow);
+function savedPage(){
+  var userName = prompt('Enter Username');
+  if(localStorage.getItem(userName)){
+    var savedDestinations = loadLocalStorage(userName);
+    for (var i = 0; i < savedDestinations.length; i++){
+      var newListItem = document.createElement('li');
+      var linkTag = document.createElement('a');
+      linkTag.setAttribute('href', savedDestinations[i].path);
+      linkTag.textContent = savedDestinations[i].name;
+      newListItem.appendChild(linkTag);
+      savedLinks.appendChild(newListItem);
     }
   }
-  return Destination;
+  if (localStorage.getItem(userName) === null){
+    var noSavedItem = document.createElement('li');
+    noSavedItem.textContent = 'You currently have 0 saved Destinations';
+    savedLinks.appendChild(noSavedItem);
+  }
 }
-
-// function renderSaved (){
-//   //function to send user to Saved page
-//   window.open ('saved.html');
-//   //and render saved destinations
-//   retrieveStoredDestination();
-//   //loop through all objects created by retrieveStoredDestination
-//   document.write(Destination.path);
-// }
-
 
 saveDestination.addEventListener('click', handleSave);
-
-// TODO: Figure out how to fix the Uncaught TypeError
-// site for how to not overwrite storage
