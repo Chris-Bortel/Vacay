@@ -3,35 +3,118 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/reset.css" alt="meyers-reset">
-  <link rel="stylesheet" href="/css/destinations.css" alt="">
-  <title>Travel Fever</title>
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/Destinations.css" type="text/css">
+  <title>Zermatt, Switzerland</title>
 </head>
-<body>
+
+<!-- Container and body margins make snow or sun page border -->
+<body class = "snow">
+  <div class = "container">
   <header>
-    <a href="" id="Zermatt" class="save-destination">Save This Destination</a>
+    <a href="./index.html">Back to Home</a>
+    <a href="./saved.html">Saved Destinations</a>
 
     <nav>
-      <h1>Vacay Travel Planner</h1>
-      <h2>Destination-5</h2>
-      <ul>
-        <li><a href="../html/index.html">Landing Page</a></li>
-        <li><a href="../html/saved.html">Saved Destinations</a></li>
-        <br>
-        <li><a href="../html/dest1.html">Destination-1</a></li>
-        <li><a href="../html/dest2.html">Destination-2</a></li>
-        <li><a href="../html/dest3.html">Destination-3</a></li>
-        <li><a href="../html/dest4.html">Destination-4</a></li>
-        <li><a href="../html/dest5.html">Destination-5</a></li>
-        <li><a href="../html/dest6.html">Destination-6</a></li>
-        <li><a href="../html/dest7.html">Destination-7</a></li>
-        <li><a href="../html/dest8.html">Destination-8</a></li>
-        <br>
-        <li><a href="../html/about.html">About Us</a></li>
-      </ul>
+      <form>
+        <select id="dest" name="dest" onchange="dropDownSelection()">
+              <option value="">Browse Destinations</option>
+              <option value="Stowe">Stowe, Vermont</option>
+              <option value="Telluride">Telluride, Colorado</option>
+              <option value="Tramso">Tramsø, Norway</option>
+              <option value="Zermatt">Zermatt, Switzerland</option>
+              <option value="">-----------</option>
+              <option value="Cabo-San-Lucas">Cabo San Lucas, Mexico</option>
+              <option value="Granada">Granada, Spain</option>
+              <option value="Los-Angeles">Los Angeles, California</option>
+              <option value="Phuket">Phuket, Thailand</option>
+          </select>
+      </form>
+      <!-- <form>
+        <label>Browse By Category</label>
+          <select id="dest" name="dest">
+              <option value="Snow">Snow</option>
+              <option value="Sun">Sun</option>
+          </select>
+      </form> STRETCH GOAL!!!  -->
     </nav>
   </header>
-  <script src="../js/app.js" alt="" ></script>
+  <main>
+    <section id = "hero">
+      <h1 >Zermatt</h1>
+      <img src="./img/zermatt.jpg" class = "center">
+    </section >
+      <article id = "scroll">
+        <h3>Cozy Chalets in the Swiss Alps</h3>
+         <p> <br><br>Welcome to Switzerland’s highest ski resort. Skiing enthusiasts from all over the world congregate in Zermatt. 
+          Guests come to experience perfect skiing with miles of pistes, fantastic slopes, sun and snow. There are three main mountain
+          peaks to visit from Zermatt: Matterhorn Glacier Paradise, Gornergrat, and Rothorn. Visit all three or pick your favorite. 
+          With its unique pyramidal shape, the Matterhorn is one of the most recognizable mountains in the world. It sits right on the 
+          border between Switzerland and Italy. The summit is 4,478 meters (14,692 feet) high, making this one of the highest summits 
+          in the Alps and Europe. If you have mountaineering experience, you can climb Matterhorn. This typically takes two days, with 
+          an overnight stay in Hornli Hut. Roughly 150 people per day climb the Matterhorn in the summer months.
+          
+          <br><br>Zermatt is an idyllic mountain village tucked away in the Swiss Alps. The mighty Matterhorn dominates the skyline,
+           creating one of the most unique alpine landscapes in Europe. Explore the hiking trails, journey up higher into the 
+           mountains by cable car and train, stroll the scenic streets of Zermatt, and go skiing all year long. 
+          <br><br>Trekking to see the Alhambra from above may not be for the faint-hearted, but you’ll be rewarded 
+          with spectacular views. Head to the Ermita de San Miguel church, atop the Sacromonte hill above the barrios of Sacromonte 
+          and the Albaicín – go up the steps from the Albaicín’s Calle Cruz de la Rauda or walk from the Carril de San Miguel. 
+          Take a bottle of wine early evening and watch the sun set across the hills below, the Alhambra opposite and, beyond 
+          that, the Sierra Nevada mountains. On weekends the tower ruins of La Silla del Moro (the seat of the Moors) present a 
+          different view again, from directly above the eastern side of the Alhambra. Trek from Camino Fuente del Avellano by the 
+          River Darro and you’ll see the palace and gardens open out below, as well as the city and plains and peaks to its west.
+          <br><br> Zermatt is a car-free town with a car park available at the train station outside the village. Most people get 
+          here by train and once here, you will get around by walking or taking the e-Bus or an e-Taxi.
+        </p>
+      </article>
+      <a href="" id="Zermatt" class="save-destination">Save This Destination</a>
+    <section id = "info-links">
+      <section id = "temps">
+        <h2>Avg Temps &#8457</h2>
+        <ul id = "temps-list"> 
+          <li>Winter</li>
+          <li>Spring</li>
+          <li>Summer</li>
+          <li>Fall</li>
+          <li> Hi 35 -- Low 19</li>
+          <li> Hi 51 -- Low 33</li>
+          <li> Hi 68 -- Low 46</li>
+          <li> Hi 61 -- Low 28</li>
+
+        </ul>
+      </section>
+      <section id = "events">
+        <ul> 
+          <h2>Annual Events</h2>
+          <li><a href = "https://www.earthtrekkers.com/best-things-to-do-in-zermatt-switzerland/">
+            12 Amazing Things to Do in Zermatt</a></li>
+          <li><a href = "https://www.lonelyplanet.com/switzerland/valais/zermatt">
+            Lonely Planet--Zermatt</a></li>
+          <li><a href = "https://www.ricksteves.com/watch-read-listen/read/articles/zermatt-switzerland">Rick Steves' Zermatt</a></li>
+          <li><br></li>
+        </ul>
+      </section>
+      <section id = "links">
+        <ul> 
+          <h2>Links</h2>
+          <li><a href = "https://www.zermatt.ch/en/ski"> Skiing and Snowboarding</a></li>
+          <li><a href = "https://www.nytimes.com/2020/03/05/travel/what-to-do-36-hours-in-zermatt.html"> NY Times 36 Hours in Zermatt</a></li>
+          <li><a href = "https://www.myswitzerland.com/en-us/destinations/zermatt/">Visitor Info</a></li>
+          <li><br></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+  <script src="./js/app.js"></script>
+  <script src="./js/storage.js"></script>
+  <footer>
+    <a href="./about.html">Meet The Team</a>
+    <p>&copy;2020  Team Vacay: Ashley Casimir, Chris Bortel, Henry Funk, Kim Damalas </p> 
+    <img src="./img/small-snow-icon.png" class = "icon">
+  </footer>
+  
+  <!-- Container and body margins make snow or sun page border -->
+</div>
 </body>
-<footer>&copy;Vacay Travel Planner 2020 </footer>
 </html>
