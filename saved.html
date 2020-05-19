@@ -48,6 +48,13 @@
         <h1>Ready For One Of These?</h1>
       </p>
     </section>
+
+    <form >
+      <input id = "input-username" type = "text" placeholder = "Enter Username" required>
+      <input type = "submit"  id = "view-button" class="save-destination" value = "View Your Destinations" onclick= "savedPage()">
+      <p id = "duplicate-dest"></p>
+    </form>
+
     <section id = "saved">
 <!-- need js link to local storage -->
       <!-- <img src="../img/snow-thumbnail.jpg" class="thumbnail">
@@ -62,5 +69,7 @@
     &copy;Vacay Travel Planner 2020 </footer>
   <script src="./js/app.js" alt="" ></script>
   <script src="./js/storage.js"></script>
+  <script src="./js/saved.js"></script>
+
 </body>
 </html>

@@ -3,36 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/reset.css" alt="meyers-reset">
-  <link rel="stylesheet" href="/css/destinations.css" alt="">
-  <title>Travel Fever</title>
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/Destinations.css" type="text/css">
+  <title>Phuket, Thailand</title>
 </head>
-<body>
-  <a href="" id="Phuket" class="save-destination">Save This Destination</a>
 
+<!-- Container and body margins make snow or sun page border -->
+<body class = "sun">
+  <div class = "container">
   <header>
+    <a href="./index.html">Back to Home</a>
+    <a href="./saved.html">Saved Destinations</a>
+
     <nav>
-      <h1>Vacay Travel Planner</h1>
-      <h2>Destination-8</h2>
-      <ul>
-        <li><a href="../html/index.html">Landing Page</a></li>
-        <li><a href="../html/saved.html">Saved Destinations</a></li>
-        <br>
-        <li><a href="../html/dest1.html">Destination-1</a></li>
-        <li><a href="../html/dest2.html">Destination-2</a></li>
-        <li><a href="../html/dest3.html">Destination-3</a></li>
-        <li><a href="../html/dest4.html">Destination-4</a></li>
-        <li><a href="../html/dest5.html">Destination-5</a></li>
-        <li><a href="../html/dest6.html">Destination-6</a></li>
-        <li><a href="../html/dest7.html">Destination-7</a></li>
-        <li><a href="../html/dest8.html">Destination-8</a></li>
-        <br>
-        <li><a href="../html/about.html">About Us</a></li>
-      </ul>
+      <form>
+        <select id="dest" name="dest" onchange="dropDownSelection()">
+              <option value="">Browse Destinations</option>
+              <option value="Stowe">Stowe, Vermont</option>
+              <option value="Telluride">Telluride, Colorado</option>
+              <option value="Tramso">Tromsø, Norway</option>
+              <option value="Zermatt">Zermatt, Switzerland</option>
+              <option value="">-----------</option>
+              <option value="Cabo-San-Lucas">Cabo San Lucas, Mexico</option>
+              <option value="Granada">Granada, Spain</option>
+              <option value="Los-Angeles">Los Angeles, California</option>
+              <option value="Phuket">Phuket, Thailand</option>
+          </select>
+      </form>
+      <!-- <form>
+        <label>Browse By Category</label>
+          <select id="dest" name="dest">
+              <option value="Snow">Snow</option>
+              <option value="Sun">Sun</option>
+          </select>
+      </form> STRETCH GOAL!!!  -->
     </nav>
   </header>
+  <main>
+    <section id = "hero">
+      <h1 >Phuket</h1>
+      <img src="./img/los-angeles-sunset-small.jpg" class = "center">
+    </section >
+      <article id = "scroll">
+        <h3>Need some fun in the sun? Then take a trip to the stars and visit Los Angeles, California!</h3>
+         <p> <br><br>But don’t just go straight to Hollywood. The sprawl of this city can be intimidating. Visitors 
+          are often overwhelmed and stuck seeing nothing but the fake movie sets barely covering the growing 
+          homelessness crisis.
+          <br><br>Dive deeper to visit the artistic epicenter that made Los Angeles what it is today. From the beaches 
+          on the Westside near Santa Monica to the hippest coffee shops in town on the east-side, discover 
+          the magic that lies within each unique neighborhood.
+          <br><br>Silver Lake, Echo Park, and Los Feliz make up a cultural tri-fecta on the eastside of the city. With 
+          dozens of boutique music venues drawing major acts into intimate settings, or discovering the next 
+          big thing, there’s always something to do in this favorite haunt for the creative spirit in LA.
+          <br><br>Visit Pasadena in the foothills of the San Gabriel mountains to catch a game at the famous Rose-Bowl 
+          stadium. Better yet, head over to Lucky Boy for their world famous breakfast burrito!
+          <br><br>Take a hike through the Griffith Observatory and catch sunset from one of the best views at the top. 
+          Your friends will never believe there was so much greenery to be found in Los Angeles.
+          <br><br>And yes, if you really need to, you can visit Hollywood too!
+        </p>
+      </article>
+
+      <form >
+        <input id = "input-username" type = "text" placeholder = "Enter Username" required>
+        <input type = "submit" id="Phuket" class="save-destination" value = "Save This Destination">
+        <p id = "duplicate-dest"></p>
+      </form>
+
+    <section id = "info-links">
+      <section id = "temps">
+        <h2>Avg Temps &#8457</h2>
+        <ul id = "temps-list"> 
+          <li>Winter</li>
+          <li>Spring</li>
+          <li>Summer</li>
+          <li>Fall</li>
+          <li> Hi 70 -- Low 50</li>
+          <li> Hi 74 -- Low 58</li>
+          <li> Hi 84 -- Low 66</li>
+          <li> Hi 80 -- Low 60</li>
+
+        </ul>
+      </section>
+      <section id = "events">
+        <ul> 
+          <h2>Annual Events</h2>
+          <li><a href = "https://theculturetrip.com/north-america/usa/california/articles/la-s-9-best-annual-events/">
+            Culture Trip -- 9 Best</a></li>
+          <li><a href = "https://www.welikela.com/month-by-month-los-angeles-events/">
+            We Like LA Top 10</a></li>
+          <li><a href = "https://www.timeout.com/los-angeles/features/182/festivals-events-in-los-angeles">Festivals</a></li>
+          <li><a href = "https://www.latimes.com/about/events/">LA Times Events Section</a></li>
+        </ul>
+      </section>
+      <section id = "links">
+        <ul> 
+          <h2>Links</h2>
+          <li><a href = "https://www.discoverlosangeles.com">Discover LA</a></li>
+          <li><a href = "https://www.lamag.com">LA Magazine</a></li>
+          <li><a href = "http://luckyboyburgers.com/">Lucky Boy Burgers</a></li>
+        </ul>
+      </section>
+    </section>
+  </main>
   <script src="./js/app.js"></script>
   <script src="./js/storage.js"></script>
+  <footer>
+    <a href="./about.html">Meet The Team</a>
+    <p>&copy;2020  Team Vacay: Ashley Casimir, Chris Bortel, Henry Funk, Kim Damalas </p> 
+    <img src="./img/small-sun-icon.png" class = "icon">
+  </footer>
+  
+  <!-- Container and body margins make snow or sun page border -->
+</div>
 </body>
-<footer>&copy;Vacay Travel Planner 2020 </footer>
 </html>
