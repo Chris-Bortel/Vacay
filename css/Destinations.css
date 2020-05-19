@@ -108,9 +108,10 @@ a, .save-destination, #input-username{
   font-size: 16px;
   font-family: portada, serif; 
   font-weight: 500;
-  margin-bottom: 0px;
   border-right: 5px solid #662027;
   border-left: 5px solid #662027;
+  border-top: none;
+  border-bottom: none;
   padding: 2px 8px;
   width: 200px;
 }
@@ -193,7 +194,7 @@ h3 {
 
 #duplicate-dest {
   margin: 15px 0px 0px 75px;
-  height: 200px;
+  height: 100px;
 
 }
 

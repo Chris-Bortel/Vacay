@@ -17,6 +17,11 @@ for (var i = 0; i < destArray.length; i++){
 
 function loadLocalStorage(name){
   var loadedDestinations = JSON.parse(localStorage.getItem(name));
+  if ((loadedDestinations === null) && (name !=='')){
+    var noSavedItem = document.createElement('li');
+    noSavedItem.textContent = 'You Have 0 Saved Destinations';
+    savedLinks.appendChild(noSavedItem);
+  }
   return loadedDestinations;
 }
 
