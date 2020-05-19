@@ -11,28 +11,31 @@ for (var i = 0; i < destArray.length; i++){
   console.log(saveDestination);
 }
 
+
+function loadLocalStorage(name){
+  var loadedDestinations = JSON.parse(localStorage.getItem(name));
+  return loadedDestinations;
+}
+
+function addToLocalStorage(localStorageArr, destinationToAdd){
+  for(i = 0; i < localStorageArr.length; i++){
+    if (localStorageArr[i].name === destinationToAdd.name){
+      alert('You have already saved this Destination!');
+      return localStorageArr;
+    }else{
+      localStorageArr.push(destinationToAdd);
+      console.log(localStorageArr);
+      return localStorageArr;
+    }
+  }
+}
+
 function saveToLocalStorage(name,infoToSave){
   var destinationsToSave = JSON.stringify(infoToSave);
   console.log(destinationsToSave);
   localStorage.setItem(name, destinationsToSave);
 }
 
-
-function loadLocalStorage(name){
-
-  var localStorageDestinations = JSON.parse(localStorage.getItem(name));
-
-  return localStorageDestinations;
-}
-
-function addToLocalStorage(localStorageArr, destinationToAdd){
-  localStorageArr.push(destinationToAdd);
-  console.log(localStorageArr);
-  // tempArray.push(destinationToAdd);
-  // console.log(tempArray);
-  // return tempArray;
-  return localStorageArr;
-}
 
 function handleSave(event) {
   event.preventDefault();
@@ -55,15 +58,38 @@ function handleSave(event) {
       console.log(destArray[i].name);
       if(favDestinations === destArray[i].name){
         var savedDestinations = loadLocalStorage(userName);
-        var addToSaveDestinations = addToLocalStorage(savedDestinations, destArray[i]);
-        console.log(addToSaveDestinations);
-        saveToLocalStorage(userName,addToSaveDestinations);
+        console.log(savedDestinations);
+        var newSavedDestinations = addToLocalStorage(savedDestinations, destArray[i]);
+        console.log(newSavedDestinations);
+        saveToLocalStorage(userName,newSavedDestinations);
         break;
       }
     }
   }
 }
 
+
+var savedLinks = document.getElementById('saved-links');
+
+function savedPage(){
+  var userName = prompt('Enter Username');
+  if(localStorage.getItem(userName)){
+    var savedDestinations = loadLocalStorage(userName);
+    for (var i = 0; i < savedDestinations.length; i++){
+      var newListItem = document.createElement('li');
+      var linkTag = document.createElement('a');
+      linkTag.setAttribute('href', savedDestinations[i].path);
+      linkTag.textContent = savedDestinations[i].name;
+      newListItem.appendChild(linkTag);
+      savedLinks.appendChild(newListItem);
+    }
+  }
+  if (localStorage.getItem(userName) === null){
+    var noSavedItem = document.createElement('li');
+    noSavedItem.textContent = 'You currently have 0 saved Destinations';
+    savedLinks.appendChild(noSavedItem);
+  }
+}
 
 // key = name , value = destination object
 // object that we already created will take us to saved web page
