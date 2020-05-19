@@ -3,35 +3,115 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/css/reset.css" alt="meyers-reset">
-  <link rel="stylesheet" href="/css/destinations.css" alt="">
-  <title>Travel Fever</title>
+  <link rel="stylesheet" href="./css/reset.css" type="text/css">
+  <link rel="stylesheet" href="./css/Destinations.css" type="text/css">
+  <title>Telluride, Colorado</title>
 </head>
-<body>
+
+<!-- Container and body margins make snow or sun page border -->
+<body class = "snow">
+  <div class = "container">
   <header>
-    <a href="" id="Telluride" class="save-destination">Save This Destination</a>
+    <a href="./index.html">Back to Home</a>
+    <a href="./saved.html">Saved Destinations</a>
 
     <nav>
-      <h1>Vacay Travel Planner</h1>
-      <h2>Destination-4</h2>
-      <ul>
-        <li><a href="../html/index.html">Landing Page</a></li>
-        <li><a href="../html/saved.html">Saved Destinations</a></li>
-        <br>
-        <li><a href="../html/dest1.html">Destination-1</a></li>
-        <li><a href="../html/dest2.html">Destination-2</a></li>
-        <li><a href="../html/dest3.html">Destination-3</a></li>
-        <li><a href="../html/dest4.html">Destination-4</a></li>
-        <li><a href="../html/dest5.html">Destination-5</a></li>
-        <li><a href="../html/dest6.html">Destination-6</a></li>
-        <li><a href="../html/dest7.html">Destination-7</a></li>
-        <li><a href="../html/dest8.html">Destination-8</a></li>
-        <br>
-        <li><a href="../html/about.html">About Us</a></li>
-      </ul>
+      <form>
+        <select id="dest" name="dest" onchange="dropDownSelection()">
+              <option value="">Browse Destinations</option>
+              <option value="Stowe">Stowe, Vermont</option>
+              <option value="Telluride">Telluride, Colorado</option>
+              <option value="Tramso">Tramsø, Norway</option>
+              <option value="Zermatt">Zermatt, Switzerland</option>
+              <option value="">-----------</option>
+              <option value="Cabo-San-Lucas">Cabo San Lucas, Mexico</option>
+              <option value="Granada">Granada, Spain</option>
+              <option value="Los-Angeles">Los Angeles, California</option>
+              <option value="Phuket">Phuket, Thailand</option>
+          </select>
+      </form>
+      <!-- <form>
+        <label>Browse By Category</label>
+          <select id="dest" name="dest">
+              <option value="Snow">Snow</option>
+              <option value="Sun">Sun</option>
+          </select>
+      </form> STRETCH GOAL!!!  -->
     </nav>
   </header>
-  <script src="../js/app.js" alt="" ></script>
+  <main>
+    <section id = "hero">
+      <h1 >Telluride</h1>
+      <img src="./img/telluride.jpg" class = "center">
+    </section >
+      <article id = "scroll">
+        <h3>Have an itch for adventure? Then look no further than Telluride, Colorado!</h3>
+         <p> <br><br>From world class skiing in the winters to world-famous festivals in the 
+          summer, this idyllic mountain town has something for everyone!
+          <br><br>Founded as a small mining outpost in the late 1800’s, this picturesque box 
+          canyon became a travel destination for celebrities and ski-bums alike when the ski 
+          came into existence in the late 70’s.
+          <br><br>Being at least a 6 hour drive from Denver, Telluride’s remote location make 
+          it a destination for the determined. While Vail and other front-range resorts take much 
+          of the incoming ski-traffic, only those willing to make the trek make it to Telluride. 
+          This keeps lift lines to a reasonable size and allows the town to retain much of its 
+          original rustic charm.
+
+          <br><br>And if skiing isn’t for you, there’s plenty else to do! The Telluride Film 
+          Festival draws the Hollywood elite in the summer, while the Bluegrass music festival 
+          keeps the vibe rooted. World class Ice Climbing is just a two-hour drive away in Ouray 
+          Colorado, while the majestic Moab Desert and Indian Creek provide regular climber’s a 
+          paradise of rock and mountain biking.
+          
+        </p>
+      </article>
+      <a href="" id="Telluride" class="save-destination">Save This Destination</a>
+    <section id = "info-links">
+      <section id = "temps">
+        <h2>Avg Temps &#8457</h2>
+        <ul id = "temps-list"> 
+          <li>Winter</li>
+          <li>Spring</li>
+          <li>Summer</li>
+          <li>Fall</li>
+          <li> Hi 39 -- Low 4</li>
+          <li> Hi 61 -- Low 15</li>
+          <li> Hi 77 -- Low 35</li>
+          <li> Hi 60 -- Low 25</li>
+
+        </ul>
+      </section>
+      <section id = "events">
+        <ul> 
+          <h2>Annual Events</h2>
+          <li><a href = "https://www.telluride.com/">
+            Festivals and Events</a></li>
+          <li><a href = "https://www.telluridearts.org/eventslist">
+            Annual Arts Festival</a></li>
+          <li><a href = "https://www.visittelluride.com/play/festivals-events/">Annual Festivals</a></li>
+          <li><br></li>
+        </ul>
+      </section>
+      <section id = "links">
+        <ul> 
+          <h2>Links</h2>
+          <li><a href = "http://www.tellurideskiandgolfclub.com/">Ski and Golf Club</a></li>
+          <li><a href = "https://www.telluride-co.gov/">Telluride City Site</a></li>
+          <li><a href = "https://www.telluride.com/">Lodgings and Activity</a></li>
+          <li><br></li>
+        </ul>
+      </section>
+    </section>
+  </main>
+  <script src="./js/app.js"></script>
+  <script src="./js/storage.js"></script>
+  <footer>
+    <a href="./about.html">Meet The Team</a>
+    <p>&copy;2020  Team Vacay: Ashley Casimir, Chris Bortel, Henry Funk, Kim Damalas </p> 
+    <img src="./img/small-snow-icon.png" class = "icon">
+  </footer>
+  
+  <!-- Container and body margins make snow or sun page border -->
+</div>
 </body>
-<footer>&copy;Vacay Travel Planner 2020 </footer>
 </html>

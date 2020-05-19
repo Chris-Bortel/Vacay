@@ -20,6 +20,16 @@ function Destination(name, path, sun = 0, snow = 0) {
 }
 
 // instantiate objects
+// new Destination('Los Angeles', '/Vacay/los-angeles.html', true);
+// new Destination('Cabo San Lucas', '/Vacay/cabo-san-lucas.html', true);
+// new Destination('Granada', '/Vacay/granada.html', true);
+// new Destination('Phuket', '/Vacay/phuket.html', true);
+// new Destination('Stowe', '/Vacay/stowe.html', '', true);
+// new Destination('Telluride', '/Vacay/telluride.html', '', true);
+// new Destination('Tramsø', '/Vacay/tramso.html', '', true);
+// new Destination('Zermatt', '/Vacay/zermatt.html', '', true);
+
+///copy for live-server testing
 new Destination('Los Angeles', '/los-angeles.html', true);
 new Destination('Cabo San Lucas', '/cabo-san-lucas.html', true);
 new Destination('Granada', '/granada.html', true);
@@ -49,7 +59,10 @@ function dropDownSelection(){
   } else if (dropDown === 'Phuket'){
     window.open(destArray[3].path,'_self');
   }
+  dropDown.selected.value = 'reset';
 }
+
+
 console.log(destArray);
 // A function that goes through destArray and finds the 'sun' or 'snow' destinations based off of what the user chooses.
 function weather(sunOrSnow) {
