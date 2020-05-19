@@ -14,13 +14,12 @@ Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Luc
   width: 90%;
 }
 
-.save-destination{
+.save-destination, #input-username{
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   width: 16%;
-
+  margin: 15px 0px 0px 40px;
 }
+
 
 .icon{
   float: right;
@@ -34,7 +33,7 @@ whitesmoke on both */
 
 
 .sun{
-background-color:#CF5B2F;
+  background-color:#CF5B2F;
 }
 
 .sun h3{
@@ -45,7 +44,7 @@ background-color:#CF5B2F;
   color: #255766;
 }
 
-.sun a, .sun .save-destination{
+.sun a, .sun .save-destination, .sun #input-username{
   color:#255766;
   border-right: 5px solid #255766;
   border-left: 5px solid #255766;
@@ -88,6 +87,10 @@ background-color:#CF5B2F;
   color: #662027;
 }
 
+.snow footer a:hover {
+  background-color:#662027;
+}
+
 /* If not specifically tagged for .sun section applies for snow and both */
 
 body {
@@ -97,15 +100,8 @@ body {
 main {
   padding: 0% 10%;
 }
-/* a {
-  text-decoration: none;
-  color: #662027; 
-  font-size: 16px;
-  font-weight: 300; 
-  font-style: normal;
-} */
 
-a, .save-destination{
+a, .save-destination, #input-username{
   text-decoration: none;
   text-align: center;
   color: #662027;
@@ -119,6 +115,11 @@ a, .save-destination{
   width: 200px;
 }
 
+#input-username{
+  text-align: center;
+  font-size: 12px;
+  width: 100px;
+}
 
 
 a:hover, .save-destination:hover{
@@ -190,12 +191,18 @@ h3 {
   padding-bottom: 20px;
 }
 
+#duplicate-dest {
+  margin: 15px 0px 0px 75px;
+  height: 200px;
+
+}
+
 #info-links {
   display: flex;
   justify-content: space-evenly;
-  align-items: center;
-  margin-top: 80px;
+  align-items: flex-start;
 }
+
 #links a, #events a{
   border: none;
 }

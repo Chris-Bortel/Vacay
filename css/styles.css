@@ -147,7 +147,7 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
 
 /* Style the back side */
 .flip-box-back {
-  background-color: #255766;
+  background-color: #397dcf;
   color: whitesmoke;
   transform: rotateY(180deg);
 }
@@ -235,15 +235,15 @@ footer p {
   text-align: left;
   color: #255766;
   font-size: 15px;
-  line-height: 3;
+  line-height: 1.5;
   font-weight: 500;
-  margin: 15px auto;
+  margin: 30px 0px;
   height: auto;
 }
 
 footer{
   text-align: left;
-  margin: 80px auto 0px;
+  margin: 150px auto 0px;
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
