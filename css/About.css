@@ -1,3 +1,116 @@
+/* #255766--Blue Green; #F15A29--rgb(197, 91, 49); #802E1B--Cranberry; whitesmoke
+Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+ Portada Reg = body: font-family: portada, serif; font-weight: 400; font-style: normal;
+*/
+
+
+
 body {
-  background-color:rgba(42, 183, 218, 0.666);
+  background-color:#255766;
+  color: whitesmoke;
+  font-family: portada, serif; 
+  font-weight: 400; 
+  font-style: normal;
+}
+
+.icon{
+  height: 150px;
+  width: 150px;
+}
+
+.thumbnail {
+  height: 200px;
+  width: 200px;
+  border: 3px solid #662027;
+  margin: 20px;
+}
+
+.member {
+  display: flex;
+  margin: 30px;
+  align-content: center;
+  
+}
+
+h1 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 42px;
+  text-align: center;
+  color: #662027;
+  text-align: center;
+  padding-top: 50px
+  
+}
+
+header {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: whitesmoke;
+  height: 150px;
+  width: 50%;
+  margin: 50px auto 100px;
+  border: 5px solid #662027;
+}
+
+figcaption {
+  padding: 100px 30px 0px;
+  font-family: portada, serif; font-weight: 400; font-style: normal;
+}
+
+.pitch {
+  font-family: portada, serif; font-weight: 400; font-style: normal;
+  text-align: left;
+  color: whitesmoke;
+  font-size: 15px;
+  line-height: 1.5;
+  font-weight: 300;
+  margin: 20px auto 20px 80px;
+  width: 50%;
+}
+
+h3 {
+  font-family: portada, serif; font-weight: 400; font-style: normal;
+  font-size: 18px;
+  margin-left: 30px;
+  text-align: left;
+  color: whitesmoke;
+}
+
+footer a {
+  text-decoration: none;
+  color: whitesmoke;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  border-right: 5px solid #662027;
+  border-left: 5px solid #662027;
+  padding: 2px 8px;
+}
+
+footer a:hover{
+  background-color: #662027;
+  color:whitesmoke
+}
+
+footer p {
+  text-decoration: none;
+  text-align: left;
+  color:whitesmoke;
+  font-size: 15px;
+  line-height: 3;
+  font-weight: 500;
+  margin: 15px 0px;
+  height: auto;
+}
+
+footer{
+  text-align: left;
+  margin: 80px auto 0px;
+  font-family: portada, serif; 
+  font-weight: 400; 
+  font-style: normal;
+  border-top: 1px solid #662027;
+  padding: 40px 0px;
+
+  width: 90%;
 }
