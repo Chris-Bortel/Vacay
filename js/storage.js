@@ -21,10 +21,12 @@ function loadLocalStorage(name){
   return loadedDestinations;
 }
 
+
 function addToLocalStorage(localStorageArr, destinationToAdd){
   for(i = 0; i < localStorageArr.length; i++){
     if (localStorageArr[i].name === destinationToAdd.name){
-      alert('You have already saved this Destination!');
+      var parentEl = document.getElementById('duplicate-dest');
+      parentEl.textContent = 'You have already saved this Destination';
       return localStorageArr;
     }else{
       localStorageArr.push(destinationToAdd);
@@ -36,12 +38,18 @@ function addToLocalStorage(localStorageArr, destinationToAdd){
 function saveToLocalStorage(name,infoToSave){
   var destinationsToSave = JSON.stringify(infoToSave);
   localStorage.setItem(name, destinationsToSave);
+  var parentEl = document.getElementById('duplicate-dest');
+  parentEl.textContent = 'Destination Saved';
+
 }
 
 
 function handleSave(event) {
   event.preventDefault();
-  var userName = prompt('Enter Name');
+  var userName = event.target.form[0].value;
+
+  console.log (userName);
+  console.log(event);
 
   var favDestinations = event.target.id;
   if(localStorage.getItem(userName) === null){
@@ -64,27 +72,5 @@ function handleSave(event) {
   }
 }
 
-
-var savedLinks = document.getElementById('saved-links');
-
-function savedPage(){
-  var userName = prompt('Enter Username');
-  if(localStorage.getItem(userName)){
-    var savedDestinations = loadLocalStorage(userName);
-    for (var i = 0; i < savedDestinations.length; i++){
-      var newListItem = document.createElement('li');
-      var linkTag = document.createElement('a');
-      linkTag.setAttribute('href', savedDestinations[i].path);
-      linkTag.textContent = savedDestinations[i].name;
-      newListItem.appendChild(linkTag);
-      savedLinks.appendChild(newListItem);
-    }
-  }
-  if (localStorage.getItem(userName) === null){
-    var noSavedItem = document.createElement('li');
-    noSavedItem.textContent = 'You currently have 0 saved Destinations';
-    savedLinks.appendChild(noSavedItem);
-  }
-}
 
 saveDestination.addEventListener('click', handleSave);

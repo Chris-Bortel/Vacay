@@ -141,7 +141,7 @@ demonstrate that the flip itself goes out of the box on hover (remove perspectiv
 
 /* Style the front side (fallback if image is missing) */
 .flip-box-front {
-  background-color:#255766;
+  background-color:#397dcf;
   color:whitesmoke;
 }
 
