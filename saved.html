@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="/css/saved.css" alt="">
   <title>Vacay Travel Planner</title>
 </head>
-<body>
+<body onload="savedPage()">
   <header>
 
 
@@ -50,13 +50,17 @@
     </section>
     <section id = "saved">
 <!-- need js link to local storage -->
-      <img src="../img/snow-thumbnail.jpg" class="thumbnail">
-      <img src="../img/sun-thumbnail.jpg" class="thumbnail">
+      <!-- <img src="../img/snow-thumbnail.jpg" class="thumbnail">
+      <img src="../img/sun-thumbnail.jpg" class="thumbnail"> -->
+      <ul id="saved-links">
+
+      </ul>
     </section>
   </main>
   <footer>
     <link> <a href="../html/about.html">Meet The Team</a></link>
     &copy;Vacay Travel Planner 2020 </footer>
   <script src="./js/app.js" alt="" ></script>
+  <script src="./js/storage.js"></script>
 </body>
 </html>
