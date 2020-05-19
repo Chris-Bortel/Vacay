@@ -6,24 +6,52 @@ Trebuchet MS = display: font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Luc
 .container {
   background-color: whitesmoke;
 }
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%;
+}
+
+.save-destination{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 16%;
+
+}
+
+.icon{
+  float: right;
+  margin-top: -125px;
+  height: 150px;
+  width: 150px;
+}
+
 /* sun pages blue #255766--Blue Green with orange Orange--#CF5B2F accent 
 whitesmoke on both */
+
 
 .sun{
 background-color:#CF5B2F;
 }
 
-.sun p,.sun h1, .sun aside, .sun #dest{
+.sun h3{
+  color: #CF5B2F
+}
+
+.sun p,.sun h1, .sun h2,.sun li, .sun #dest{
   color: #255766;
 }
 
-.sun header a, .sun footer a {
+.sun a {
   color:#255766;
   border-right: 5px solid #255766;
   border-left: 5px solid #255766;
 }
 
-.sun header a:hover, .sun footer a:hover {
+.sun a:hover {
   color: whitesmoke;
   background-color: #255766;
 }
@@ -43,12 +71,15 @@ background-color:#CF5B2F;
   border-color: #255766;
 }
 
-/* snow pages blue #255766--Blue Green with cranberry #802E1B--Cranberry accent */
+/* snow pages blue #397dcf--*New* Blue because of pics with cranberry #802E1B--Cranberry accent */
 
 .snow {
-  background-color: #255766;
+  background-color: #397dcf;
 }
 
+.snow h3 {
+  color: #397dcf;
+}
 .snow h1 {
   color: #662027;
 }
@@ -66,13 +97,22 @@ body {
 main {
   padding: 0% 10%;
 }
-
-header a {
+/* a {
   text-decoration: none;
+  color: #662027; 
+  font-size: 16px;
+  font-weight: 300; 
+  font-style: normal;
+} */
+
+a {
+  text-decoration: none;
+  text-align: center;
   color: #662027;
   font-size: 16px;
+  font-family: portada, serif; 
   font-weight: 500;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
   border-right: 5px solid #662027;
   border-left: 5px solid #662027;
   padding: 2px 8px;
@@ -80,34 +120,15 @@ header a {
 
 
 
-header a:hover{
+a:hover{
   background-color: #662027;
   color:whitesmoke
 }
 
 header{
-  padding: 5%;
+  padding: 5% 5% 2%;
   }
   
-
-button a {
-  background-color: whitesmoke ;
-  color: #662027; 
-  border-left: 5px solid #662027;
-  border-right: 5px solid #662027;
-  padding: 2px 8px;
-}
-
-button :hover{
-  background-color: #662027;
-  color: whitesmoke; 
-}
-
-button {
-  border: hidden;
-  margin-left: 30px;
-}
-
 nav {
   float: right;
   }
@@ -127,48 +148,82 @@ h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 42px;
   text-align: center;
-  padding-top: 30px;
   color: #662027;
+  text-align: center;
+  margin: 0px auto 30px;
 }
 
-aside {
-  float: left;
-  margin: 50px 0px 0px 0px;
+h2 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 26px;
+  text-align: center;
   color: #662027;
+  text-align: center;
+  margin: 0px auto 15px;
+  text-decoration: underline;
 }
 
-article {
-  margin: 0px auto 0px 80px;
+h3 {
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: 20px;
+  text-align: center;
+  color: #662027;
+  text-align: center;
+  font-weight: 500;
 }
 
-#hero{
-  margin: 50px 30px;
-  height: 500px;
-  width: auto;
+
+#hero {
+  margin: 0px auto 40px;
 }
 
-
-
-p {
-  height: 200px;
+#scroll {
+  height: 225px;
   overflow: scroll;
   text-align: left;
   font-size: 15px;
   font-family: portada, serif; font-weight: 400; font-style: normal;
   line-height: 1.5;
-  margin: 60px 30px;
+  margin: 10px auto 50px;
+  width: 90%;
+  padding-bottom: 20px;
 }
 
+#info-links {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-top: 80px;
+}
+#links a, #events a{
+  border: none;
+}
 
-a {
-  text-decoration: none;
-  color: #662027; 
+li {
   text-align: center;
-  font-size: 16px;
-  font-family: portada, serif; 
-  font-weight: 300; 
-  font-style: normal;
+  font-size: 15px;
+  font-family: portada, serif; font-weight: 400; font-style: normal;
+  line-height: 1.5;
+  color: #662027;
+  border: none;
 }
+
+
+#temps-list{
+  columns: 2;
+}
+
+
+p {
+  height: 200px;
+  text-align: left;
+  font-size: 15px;
+  font-family: portada, serif; font-weight: 400; font-style: normal;
+  line-height: 1.2;
+  margin: 0px auto;
+}
+
+
 
 
 footer a {
@@ -201,7 +256,7 @@ footer p {
 
 footer{
   text-align: left;
-  margin: 250px auto 0px;
+  margin: 80px auto 0px;
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
@@ -219,7 +274,6 @@ footer{
 
   h1 {
     font-size: 36px;
-    padding-top: 50px;
   }
 
   h3 {
@@ -229,7 +283,8 @@ footer{
     font-size: 16px;
   }
 
-  #hero {
-    height: 400px;
-  }
+  /* #hero {
+    height: 300px;
+    width: 600px;
+  } */
 }

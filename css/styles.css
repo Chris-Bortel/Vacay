@@ -230,6 +230,7 @@ footer a:hover{
 }
 
 footer p {
+  overflow: auto;
   text-decoration: none;
   text-align: left;
   color: #255766;
@@ -237,12 +238,12 @@ footer p {
   line-height: 3;
   font-weight: 500;
   margin: 15px auto;
+  height: auto;
 }
 
 footer{
   text-align: left;
-  max-height: 50px;
-  margin: 250px auto 50px;
+  margin: 80px auto 0px;
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;

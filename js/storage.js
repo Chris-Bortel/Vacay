@@ -1,16 +1,20 @@
 'use strict';
 
+//match the current page we are viewing with the destination in our
+// destination array cache.  Used to figure out the id of click area
+//since we have multiple pages with Save This Destination "buttons"
+
 var currentPage = window.location.pathname;
 console.log (currentPage);
 for (var i = 0; i < destArray.length; i++){
   if (currentPage === destArray[i].path){
-    console.log(destArray[i].path);
     var saveDestination = document.getElementById(destArray[i].name);
     break;
   }
-  console.log(saveDestination);
 }
 
+//Handler function attached to Save This Destination click without overwriting
+//previous saves
 
 function loadLocalStorage(name){
   var loadedDestinations = JSON.parse(localStorage.getItem(name));
@@ -24,7 +28,6 @@ function addToLocalStorage(localStorageArr, destinationToAdd){
       return localStorageArr;
     }else{
       localStorageArr.push(destinationToAdd);
-      console.log(localStorageArr);
       return localStorageArr;
     }
   }
@@ -32,15 +35,12 @@ function addToLocalStorage(localStorageArr, destinationToAdd){
 
 function saveToLocalStorage(name,infoToSave){
   var destinationsToSave = JSON.stringify(infoToSave);
-  console.log(destinationsToSave);
   localStorage.setItem(name, destinationsToSave);
 }
 
 
 function handleSave(event) {
   event.preventDefault();
-  console.log(event);
-
   var userName = prompt('Enter Name');
 
   var favDestinations = event.target.id;
@@ -54,13 +54,9 @@ function handleSave(event) {
     }
   }else{
     for(i = 0; i < destArray.length;i++){
-      console.log(favDestinations);
-      console.log(destArray[i].name);
       if(favDestinations === destArray[i].name){
         var savedDestinations = loadLocalStorage(userName);
-        console.log(savedDestinations);
         var newSavedDestinations = addToLocalStorage(savedDestinations, destArray[i]);
-        console.log(newSavedDestinations);
         saveToLocalStorage(userName,newSavedDestinations);
         break;
       }
@@ -90,11 +86,5 @@ function savedPage(){
     savedLinks.appendChild(noSavedItem);
   }
 }
-
-// key = name , value = destination object
-// object that we already created will take us to saved web page
-
-
-// TODO: Figure out how to fix the Uncaught TypeError
 
 saveDestination.addEventListener('click', handleSave);
