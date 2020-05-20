@@ -21,7 +21,7 @@ body {
 .thumbnail {
   height: 200px;
   width: 200px;
-  border: 3px solid #662027;
+  /* border: 3px solid #662027; */
   margin: 20px;
 }
 
@@ -47,13 +47,14 @@ header {
   justify-content: space-evenly;
   background-color: whitesmoke;
   height: 150px;
-  width: 50%;
+  width: 70%;
   margin: 50px auto 100px;
-  border: 5px solid #662027;
+  border-bottom: 5px solid #662027;
 }
 
 figcaption {
   padding: 100px 30px 0px;
+  width: 10%;
   font-family: portada, serif; font-weight: 400; font-style: normal;
 }
 
@@ -64,14 +65,14 @@ figcaption {
   font-size: 15px;
   line-height: 1.5;
   font-weight: 300;
-  margin: 20px auto 20px 80px;
+  margin: 20px auto 20px 60px;
   width: 50%;
 }
 
 h3 {
   font-family: portada, serif; font-weight: 400; font-style: normal;
   font-size: 18px;
-  margin-left: 30px;
+  margin-left: 0px;
   text-align: left;
   color: whitesmoke;
 }
@@ -97,9 +98,9 @@ footer p {
   text-align: left;
   color:whitesmoke;
   font-size: 15px;
-  line-height: 3;
+  line-height: 1.5;
   font-weight: 500;
-  margin: 15px 0px;
+  margin:15px 0px;
   height: auto;
 }
 

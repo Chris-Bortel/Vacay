@@ -5,7 +5,6 @@
 //since we have multiple pages with Save This Destination "buttons"
 
 var currentPage = window.location.pathname;
-console.log (currentPage);
 for (var i = 0; i < destArray.length; i++){
   if (currentPage === destArray[i].path){
     var saveDestination = document.getElementById(destArray[i].name);
@@ -18,29 +17,38 @@ for (var i = 0; i < destArray.length; i++){
 
 function loadLocalStorage(name){
   var loadedDestinations = JSON.parse(localStorage.getItem(name));
+  if ((loadedDestinations === null) && (name !=='')){
+    var noSavedItem = document.createElement('li');
+    noSavedItem.textContent = 'You Have 0 Saved Destinations';
+    savedLinks.appendChild(noSavedItem);
+  }
   return loadedDestinations;
 }
 
 
 function addToLocalStorage(localStorageArr, destinationToAdd){
+  var parentEl = document.getElementById('duplicate-dest');
   for(i = 0; i < localStorageArr.length; i++){
     if (localStorageArr[i].name === destinationToAdd.name){
-      var parentEl = document.getElementById('duplicate-dest');
       parentEl.textContent = 'You have already saved this Destination';
-      return localStorageArr;
-    }else{
-      localStorageArr.push(destinationToAdd);
       return localStorageArr;
     }
   }
+  localStorageArr.push(destinationToAdd);
+  return localStorageArr;
+
 }
 
 function saveToLocalStorage(name,infoToSave){
-  var destinationsToSave = JSON.stringify(infoToSave);
-  localStorage.setItem(name, destinationsToSave);
   var parentEl = document.getElementById('duplicate-dest');
-  parentEl.textContent = 'Destination Saved';
-
+  var destinationsToSave = JSON.stringify(infoToSave);
+  parentEl.textContent = '';
+  if (name === ''){
+    parentEl.textContent = 'Please Enter Username';
+  }else{
+    parentEl.textContent = 'Destination Saved';
+    localStorage.setItem(name, destinationsToSave);
+  }
 }
 
 
@@ -48,8 +56,6 @@ function handleSave(event) {
   event.preventDefault();
   var userName = event.target.form[0].value;
 
-  console.log (userName);
-  console.log(event);
 
   var favDestinations = event.target.id;
   if(localStorage.getItem(userName) === null){
