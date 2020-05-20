@@ -1,6 +1,7 @@
 'use strict';
 
-var savedLinks = document.getElementById('saved-links');
+var savedLinks = document.getElementById('saved');
+
 var savedButton = document.getElementById('view-button');
 
 

@@ -36,6 +36,7 @@ main {
   margin: 40px auto 60px;
 }
 
+
 h1 {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: 42px;
@@ -100,35 +101,54 @@ a:hover, .save-destination:hover, #clear-button:hover{
 #input-username{
   color: #662027}
 
+::placeholder{
+  color:#662027;
+  font-family: portada, serif; 
+  font-weight: 400; 
+  font-style: normal;
+
+}
+
 #clear-button{
   width: 50px;
   background-color: white;
 }
 
 hr {
-  width: 90%;
+  width: 100%;
   border: .5px solid #662027;
 }
+
 #saved {
-  columns: 2;
-  width: 80%;
-  margin: 50px auto 0px;
-}
-
-#saved a{
   border: none;
+  columns: 2;
+  column-gap: 180px;
+  width: 70%;
+  margin: 50px auto 0px;
+  list-style-type:none;
+  font-size: 15px;
+  font-family: portada, serif; 
+  font-weight: 600; font-style: normal;
+  color: #255766;
+
 }
 
-li {
+#saved li {
+  text-align: left;
+  line-height: 2;
+  border: none;
   text-align: center;
-  font-size: 15px;
-  font-family: portada, serif; font-weight: 400; font-style: normal;
-  line-height: 1.5;
+}
+
+#saved a {
+  font-size: 18px;
+  font-family: portada, serif; 
+  font-weight: 600; font-style: normal;
   color: #255766;
   border: none;
+
 }
-
-
+  
 p {
   text-align: center;
   font-size: 20px;
@@ -167,7 +187,7 @@ footer p {
 
 footer{
   text-align: left;
-  margin: 150px auto 0px;
+  margin: 100px auto 0px;
   font-family: portada, serif; 
   font-weight: 400; 
   font-style: normal;
