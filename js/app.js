@@ -25,7 +25,7 @@ new Destination('Granada', '/Vacay/granada.html', true);
 new Destination('Phuket', '/Vacay/phuket.html', true);
 new Destination('Stowe', '/Vacay/stowe.html', '', true);
 new Destination('Telluride', '/Vacay/telluride.html', '', true);
-new Destination('Tramsø', '/Vacay/tramso.html', '', true);
+new Destination('Tramso', '/Vacay/tramso.html', '', true);
 new Destination('Zermatt', '/Vacay/zermatt.html', '', true);
 
 ///copy for live-server testing
@@ -35,7 +35,7 @@ new Destination('Zermatt', '/Vacay/zermatt.html', '', true);
 // new Destination('Phuket', '/phuket.html', true);
 // new Destination('Stowe', '/stowe.html', '', true);
 // new Destination('Telluride', '/telluride.html', '', true);
-// new Destination('Tramsø', '/tramso.html', '', true);
+// new Destination('Tramso', '/tramso.html', '', true);
 // new Destination('Zermatt', '/zermatt.html', '', true);
 
 //takes in user selection on the dropdopwn menu and directs user to correct destinaton page
@@ -62,7 +62,6 @@ function dropDownSelection(){
 }
 
 
-console.log(destArray);
 // A function that goes through destArray and finds the 'sun' or 'snow' destinations based off of what the user chooses.
 function weather(sunOrSnow) {
   var choiceArray = [];
